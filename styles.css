@@ -31,8 +31,6 @@
   --rule: rgba(255,255,255,0.06);
   --edge: rgba(255,255,255,0.08);
 
-  /* ── TEXT ON ACCENT ── */
-  --accent-text: #FFFFFF;
 
   --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 
           "Segoe UI", Roboto, Inter, Arial, sans-serif;
