@@ -34,9 +34,10 @@
 
   --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 
           "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  --hover-surface: color-mix(in srgb, var(--bg2) 85%, white);
 
+  
 }
-
 .nav-links a {
   color: var(--muted);
   transition: all 0.2s ease;
@@ -74,10 +75,10 @@
 } */
 
 /* subtle card hover */
-.card:hover,
 .teaser-card:hover,
-.live-card:hover {
-  background: var(--bg2);
+.live-card:hover,
+.project-card:hover {
+  background: var(--hover-surface);
 }
 
 /* ── RESET ── */
@@ -423,7 +424,7 @@ footer a:hover { color: var(--accent); }
 /* ── BLOG PAGE ── */
 .featured-card { background: var(--card); padding: 64px 56px; position: relative; overflow: hidden; cursor: pointer; transition: background 0.3s; }
 .featured-card:hover {
-  background: var(--bg2);
+  background: var(--hover-surface);
 }
 .featured-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--accent); transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left; }
 .featured-card:hover::before { transform: scaleX(1); }
