@@ -13,8 +13,8 @@
   --card:   #1c1620;
 
   /* ── TEXT ── */
-  --text:   #f5eef3;      /* soft white with warmth */
-  --muted:  #a79aa4;      /* dusty grey-pink */
+ --text:  #f8f3f7;   /* brighter, cleaner */
+ --muted: #b8aeb6;   /* lighter than before */;      /* dusty grey-pink */
 
   /* ── ACCENTS ── */
   --accent: #d88aa8;      /* rose pink (main) */
@@ -470,15 +470,38 @@ footer a:hover { color: var(--accent); }
   align-items: center;
   max-width: 1000px;
 }
-
 .album-art {
   width: 100%;
   aspect-ratio: 1;
-  background: var(--card);
+
+  /* lift it off the background */
+  background: #221a26;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--rule);
+
+  /* stronger, visible edge */
+  border: 1px solid rgba(216,138,168,0.25);
+
+  /* depth */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+
+  /* subtle texture stays */
+  position: relative;
+  overflow: hidden;
+}
+.album-art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 6px,
+    rgba(255,255,255,0.025) 6px,
+    rgba(255,255,255,0.025) 7px
+  );
 }
 
 .album-info {
