@@ -4,30 +4,30 @@
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
-
 :root {
   /* ── BASE ── */
-  --bg:     #0B1114;   /* deeper, cleaner */
+  --bg:     #0B1114;   /* keep your dark base */
   --bg2:    #121A1F;
   --card:   #151F25;
 
   /* ── TEXT ── */
-  --text:   #EAF3F9;   /* slightly brighter but still soft */
-  --muted:  #A7B4C0;   /* cooler, more distinct */
+  --text:   #EAF3F9;
+  --muted:  #A7B4C0;
 
-  /* ── ACCENT ── */
-  --accent: #6FAEFF;        /* clearer blue signal */
-  --accent-strong: #4C94F0;
-  --accent-soft: #A7CCFF;
+  /* ── ACCENT (OCEAN-BASED) ── */
+  --accent: #6FA3B5;        /* ocean blue */
+  --accent-strong: #1F7F8E; /* deeper teal */
+  --accent-soft: #AFCFE3;   /* sky */
+
+  /* ── NEW: WARM CONTRAST ── */
+  --accent-warm: #C8A97E;   /* sand */
+  --accent-warm-soft: #D9C7A6;
 
   /* ── STRUCTURE ── */
   --rule: rgba(255,255,255,0.05);
   --edge: rgba(255,255,255,0.08);
 
-  --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont;
-  --serif: "IM Fell English", Georgia, serif;
-
-  /* ── DERIVED (SYSTEM) ── */
+  /* ── SYSTEM ── */
   --nav: color-mix(in srgb, var(--bg) 94%, black);
   --noise-light: rgba(255,255,255,0.02);
 
