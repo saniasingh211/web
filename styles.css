@@ -18,8 +18,9 @@
   --accent-soft: #d6b89c;
 
   --rule: rgba(176,138,106,0.18);
+  --font:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif:  "IM Fell English", Georgia, serif;
 }
-
 /* soften hover interactions */
 a:hover {
   color: var(--accent-soft);
