@@ -4,42 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sania Singh</title>
-<!-- 
-<script>
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "noir",
-  "accentColor": "#c47fa0",
-  "showRuleLines": true
-}/*EDITMODE-END*/;
-
-const THEMES = {
-  obsidian: { bg:"#0f0e0d", bg2:"#131210", card:"#1c1a18", text:"#e8e2d9", muted:"#6e6860", accent:"#c8a96e", rule:"rgba(200,169,110,0.12)" },
-  sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
-  noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
-};
-
-function applyTheme(p) {
-  const t = THEMES[p.theme] || THEMES.obsidian;
-  const acc = p.accentColor || t.accent;
-  const r = document.documentElement;
-  r.style.setProperty('--bg',   t.bg);
-  r.style.setProperty('--bg-soft', t.bg2);;
-  r.style.setProperty('--card', t.card);
-  r.style.setProperty('--text', t.text);
-  r.style.setProperty('--muted',t.muted);
-  r.style.setProperty('--accent', acc);
-  r.style.setProperty('--rule',  t.rule);
-  r.style.setProperty('--lines', p.showRuleLines ? 'block' : 'none');
-}
-</script> -->
-
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="main-nav">
-  <a class="nav-name" href="#hero">Sania Singh</a>
+  <a class="nav-name" href="index.html">Sania Singh</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="music.html">Music</a></li>
@@ -61,7 +31,7 @@ function applyTheme(p) {
       Passionate about the law, yoga, and dogs.
     </p>
     <div class="hero-ctas">
-      <a href="#music" class="btn-primary">Hear My Music</a>
+      <a href="music.html" class="btn-primary">Hear My Music</a>
       <a href="#contact" class="btn-ghost">Get In Touch</a>
     </div>
   </div>
@@ -90,8 +60,7 @@ function applyTheme(p) {
     <div class="section-rule"></div>
   </div>
   <div class="about-grid">
-    <div class="portrait-blank">
-    </div>
+    <div class="portrait-blank reveal reveal-d1"></div>
     <div class="about-text">
       <h2 class="reveal reveal-d1">The same mind<br>that hears <em>music</em><br>in the cosmos.</h2>
       <p class="reveal reveal-d2">
@@ -101,13 +70,12 @@ function applyTheme(p) {
       </p>
       <p class="reveal reveal-d3">
         In parallel, I've spent years building a life in music — playing, producing, composing.
-        My debut album is in the works: a deeply personal body of work that sits
-        somewhere between <strong>introspection and experiment</strong>, written and produced entirely by me.
+        My debut album is in the works: a deeply personal body of work that sits somewhere
+        between <strong>introspection and experiment</strong>, written and produced entirely by me.
       </p>
       <p class="reveal reveal-d4">
         When I'm not at a desk or behind an instrument, I'm reading about <strong>law</strong>,
-        practicing <strong>yoga</strong>, or spending time with dogs
-        (I have a special place in my heart for labradors).
+        practicing <strong>yoga</strong>, or spending time with dogs.
       </p>
       <div class="about-tags reveal reveal-d5">
         <span class="tag">Physics</span>
@@ -122,14 +90,14 @@ function applyTheme(p) {
   </div>
 </section>
 
-<!-- PAGES TEASER -->
+<!-- EXPLORE -->
 <section id="pages" style="background:var(--bg2);">
   <div class="section-header reveal">
     <span class="section-num">02</span>
     <span class="section-title">Explore</span>
     <div class="section-rule"></div>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1100px;">
+  <div class="explore-grid">
     <a href="music.html" style="text-decoration:none;" class="reveal reveal-d1">
       <div class="teaser-card">
         <div class="teaser-num">02</div>
@@ -150,169 +118,13 @@ function applyTheme(p) {
     </a>
     <a href="blog.html" style="text-decoration:none;" class="reveal reveal-d3">
       <div class="teaser-card">
-        <div class="teaser-num">05</div>
+        <div class="teaser-num">04</div>
         <div class="teaser-icon"><em>—</em></div>
         <h3 class="teaser-title">Writing</h3>
         <p class="teaser-desc">Essays and reflections on music, science, law, and the places they overlap. Honest writing, no filter.</p>
         <div class="teaser-link">Read Writing →</div>
       </div>
     </a>
-  </div>
-</section>
-
-<!-- OLD MUSIC (removed) -->
-<section id="music" style="display:none;">
-  <div class="section-header reveal">
-    <span class="section-num">02</span>
-    <span class="section-title">Music</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="music-layout">
-    <div class="album-card reveal reveal-d1">
-      <div class="album-card-label">Debut Album</div>
-      <h2>Original Work</h2>
-      <p>Written, composed and produced independently — drawing from my life as a young woman in her 20s, navigating life, relationships, moving to a foreign country, tough situations. <em>No filter, just my voice.</em> And my instruments.</p>
-      <div class="album-coming">
-        <span class="album-pulse"></span>
-        <span>In Production · 2025</span>
-      </div>
-    </div>
-    <div class="music-right">
-      <div class="instruments-section reveal reveal-d2">
-        <h3>Instruments</h3>
-        <div class="instrument-list">
-          <div class="instrument-item"><span class="inst-name">Guitar</span><div class="inst-dot"></div></div>
-          <div class="instrument-item"><span class="inst-name">Piano</span><div class="inst-dot"></div></div>
-          <div class="instrument-item"><span class="inst-name">Bass</span><div class="inst-dot"></div></div>
-          <div class="instrument-item"><span class="inst-name">Vocals</span><div class="inst-dot"></div></div>
-          <div class="instrument-item"><span class="inst-name">Production</span><div class="inst-dot"></div></div>
-        </div>
-      </div>
-      <div class="soundcloud-section reveal reveal-d3">
-        <h3>Listen on SoundCloud</h3>
-        <div class="sc-embed">
-          <iframe
-            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/osania-singso&color=%23c8a96e&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            height="300">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESEARCH (moved to research.html) -->
-<section id="research" style="display:none;">
-  <div class="section-header reveal">
-    <span class="section-num">03</span>
-    <span class="section-title">Research</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="research-intro reveal">
-    <p>
-      Working at the intersection of <strong>data-driven astrophysics and applied mathematics</strong>,
-      with hands-on experience across some of the most ambitious observational instruments ever built.
-    </p>
-  </div>
-  <div class="research-grid">
-    <div class="research-card reveal reveal-d1">
-      <div class="research-icon">~</div>
-      <h3>Gravitational Wave Detection</h3>
-      <p>Data analysis and signal processing with the LIGO detector — searching for ripples in spacetime from the universe's most violent events.</p>
-      <div class="research-card-tag">LIGO · Interferometry</div>
-    </div>
-    <div class="research-card reveal reveal-d2">
-      <div class="research-icon">✦</div>
-      <h3>Neutron Star Collisions</h3>
-      <p>Modelling and analysis of binary neutron star merger events — bridging gravitational wave astronomy with multi-messenger astrophysics.</p>
-      <div class="research-card-tag">GW Astronomy · Multi-messenger</div>
-    </div>
-    <div class="research-card reveal reveal-d3">
-      <div class="research-icon">◎</div>
-      <h3>Gaia & JWST Data</h3>
-      <p>Working with Gaia's stellar catalogue and JWST's infrared imaging — exploring the structure and evolution of our galaxy with cutting-edge observational data.</p>
-      <div class="research-card-tag">Gaia · JWST · Stellar Surveys</div>
-    </div>
-  </div>
-  <div class="phd-banner reveal reveal-d2">
-    <span class="phd-banner-label">PhD</span>
-    <p class="phd-banner-text">
-      Currently seeking a PhD in <strong>Computational Data-Driven Astrophysics</strong> —
-      bringing together machine learning, mathematical modelling, and observational data to answer questions about the universe. MSc thesis in computational modelling using finite element analysis with Firedrake (Python), building on Advanced Quantum Mechanics, Dirac Notation, and General Relativity.
-    </p>
-  </div>
-</section>
-
-<!-- SKILLS (moved to research.html) -->
-<section id="skills" style="display:none;">
-  <div class="section-header reveal">
-    <span class="section-num">04</span>
-    <span class="section-title">Skills</span>
-    <div class="section-rule"></div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:1100px;">
-    <div class="reveal reveal-d1">
-      <h3 style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--rule);">Code & Computing</h3>
-      <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.95"></div></div></div>
-      <div class="skill-item"><span class="skill-name">NumPy / SciPy</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.9"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Firedrake / FEM</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.88"></div></div></div>
-      <div class="skill-item"><span class="skill-name">MATLAB</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.78"></div></div></div>
-      <div class="skill-item"><span class="skill-name">SQL · Swift · Git</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.70"></div></div></div>
-    </div>
-    <div class="reveal reveal-d2">
-      <h3 style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--rule);">Science & Maths</h3>
-      <div class="skill-item"><span class="skill-name">PDE Solvers</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.92"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Numerical Methods</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.91"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Quantum Mechanics</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.88"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Statistical Inference</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.85"></div></div></div>
-      <div class="skill-item"><span class="skill-name">General Relativity</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.80"></div></div></div>
-    </div>
-    <div class="reveal reveal-d3">
-      <h3 style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--rule);">Music</h3>
-      <div class="skill-item"><span class="skill-name">Production</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.92"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Vocals · RSL Gr.6</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.88"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Guitar · Trinity Gr.4</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.85"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Piano & Bass</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.82"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Composition</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="0.90"></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- BLOG (moved to blog.html) -->
-<section id="blog" style="display:none;">
-  <div class="section-header reveal">
-    <span class="section-num">05</span>
-    <span class="section-title">Writing</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="blog-grid">
-    <div class="blog-card blog-featured reveal reveal-d1">
-      <div class="blog-card-date">Essay · March 2025</div>
-      <h3>On Making Music While Studying the Universe</h3>
-      <p>People ask me how I hold both — the equations and the melodies. I've never had a good answer. Maybe they're the same thing, expressed in different languages. Both are attempts to describe something that resists description.</p>
-      <div class="blog-card-footer">
-        <span class="blog-read">Read Essay</span>
-        <span class="blog-arrow">→</span>
-      </div>
-    </div>
-    <div class="blog-card reveal reveal-d2">
-      <div class="blog-card-date">Reflection · Jan 2025</div>
-      <h3>What LIGO Taught Me About Listening</h3>
-      <p>A gravitational wave is just a very quiet sound. The machine that hears it is four kilometres long and must be isolated from every vibration on earth. I think about that when I'm recording vocals.</p>
-      <div class="blog-card-footer">
-        <span class="blog-read">Read</span>
-        <span class="blog-arrow">→</span>
-      </div>
-    </div>
-    <div class="blog-card reveal reveal-d3">
-      <div class="blog-card-date">Note · Dec 2024</div>
-      <h3>Why I Started Studying Law</h3>
-      <p>Not to become a lawyer — at least not yet. But because music, science, and justice are all systems of rules that occasionally break down in beautiful ways.</p>
-      <div class="blog-card-footer">
-        <span class="blog-read">Read</span>
-        <span class="blog-arrow">→</span>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -364,31 +176,20 @@ function applyTheme(p) {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span>© 2026 Sania Singh</span>
   <span>Musician · Scientist · Writer</span>
 </footer>
 
 <script>
-// Nav scroll
 const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => 
+window.addEventListener('scroll', () =>
   nav.classList.toggle('scrolled', window.scrollY > 60)
 );
 
-// Scroll reveals
 const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      e.target.querySelectorAll('.skill-bar').forEach(bar => {
-        bar.style.transform = `scaleX(${bar.dataset.width})`;
-      });
-    }
-  });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 

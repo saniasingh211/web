@@ -1,82 +1,106 @@
-# HOW TO EDIT YOUR WEBSITE
+# HOW TO EDIT — Sania Singh Website
 
-No coding required. Follow these steps.
+All pages pull their styles from **styles.css** — edit that one file and every page updates.
 
 ---
 
-## Quick edits (text, links, bio)
+## File Structure
 
-1. Open `content.js` in any text editor (Notepad, TextEdit, or VS Code)
-2. Find the section you want to change (they're clearly labelled)
-3. Edit the text between the quote marks `"like this"`
-4. Save the file
-5. Refresh your browser — changes appear immediately
-
-**Example:** To change your email, find:
 ```
-email: "saniasingh721@gmail.com",
+uploads/
+├── index.html          ← Homepage
+├── music.html          ← Music page
+├── research.html       ← Research page
+├── blog.html           ← Writing index
+├── styles.css          ← ALL styles live here
+│
+├── writing/            ← One file per essay
+│   ├── on-making-music-while-studying-the-universe.html
+│   ├── what-ligo-taught-me-about-listening.html
+│   ├── why-i-started-studying-law.html
+│   ├── moving-to-london-with-a-guitar-and-a-python-script.html
+│   ├── neutron-stars-and-why-i-find-them-deeply-romantic.html
+│   ├── on-being-a-woman-in-physics.html
+│   └── what-it-means-to-produce-your-own-album.html
+│
+└── projects/           ← One file per GitHub repo
+    └── template.html   ← Duplicate this for each repo
 ```
-And change the email address between the quotes.
 
 ---
 
-## Your files
+## Adding an Essay
 
-| File | What it is |
-|---|---|
-| `index.html` | Homepage |
-| `music.html` | Music page |
-| `research.html` | Research & PhD page |
-| `blog.html` | Writing / blog page |
-| `content.js` | **All your text content — edit this** |
-| `sania-portrait.png` | Your photo |
+1. Open the correct file in `writing/`
+2. Replace the `<div class="article-placeholder">` block with your essay content
+3. Use `<p>` for paragraphs, `<h2>` for section headings, `<strong>` for emphasis
 
----
-
-## To add a blog post
-
-Open `blog.html` in a text editor. Find a block that looks like this:
-
+**Example:**
 ```html
-<div class="post-item reveal">
-  <span class="post-num">01</span>
-  <div class="post-body">
-    <div class="post-meta">
-      <span class="post-tag">Science</span>
-      <span class="post-date">January 2025</span>
-    </div>
-    <h3 class="post-title">Your Post Title Here</h3>
-    <p class="post-excerpt">Your excerpt here...</p>
-  </div>
-</div>
+<p>Your first paragraph here.</p>
+<h2>A section heading</h2>
+<p>More text.</p>
 ```
 
-Copy one of these blocks and paste it above the others. Change the title, date, tag and excerpt.
+---
+
+## Adding MP3 Tracks (Music page)
+
+1. Create a folder called `music/` inside `uploads/`
+2. Drop your `.mp3` files in there
+3. Open `music.html`, find the `<!-- EXAMPLE TRACK -->` comment block
+4. Uncomment it and duplicate it for each track, updating:
+   - `src="music/your-file.mp3"` — the file path
+   - The title and date text
 
 ---
 
-## To change your photo
+## Adding YouTube Videos (Music page)
 
-Replace the file `sania-portrait.png` with your new photo.  
-**Important:** Name the new file exactly `sania-portrait.png` (same name, lowercase).
-
----
-
-## To go live (publish your site)
-
-1. Go to **netlify.com** → sign up free
-2. Drag your entire website folder onto the Netlify dashboard
-3. Your site is live in 30 seconds
-4. Buy a domain (namecheap.com, ~$12/year) and connect it in Netlify settings
+1. Go to your YouTube video → **Share → Embed**
+2. Copy the URL from `src="..."` — it looks like `https://www.youtube.com/embed/VIDEO_ID`
+3. Open `music.html`, find the `<!-- EXAMPLE VIDEO -->` comment block
+4. Uncomment it, paste your URL into `iframe src`, update the title
 
 ---
 
-## To update your live site after edits
+## Importing GitHub Repos as Project Pages
 
-Just drag the folder onto Netlify again. It redeploys automatically.
+Each repo gets its own page in `projects/`. Here's how:
+
+### Option A — Simple link (easiest)
+Just link directly to the repo from `research.html`. The GitHub section already has a link to your profile.
+
+### Option B — Dedicated project page (recommended)
+1. **Duplicate** `projects/template.html` and rename it, e.g. `projects/firedrake-fem.html`
+2. Edit the title, description, stack bars, and GitHub link inside the file
+3. In `research.html`, add a `project-link` inside the relevant `.project-card`:
+   ```html
+   <a href="projects/firedrake-fem.html" class="project-link">View Project →</a>
+   ```
+
+### Option C — GitHub Pages (for repos with web UIs)
+If a repo already has a `gh-pages` branch or `index.html`, enable GitHub Pages:
+- Repo → **Settings → Pages → Deploy from branch**
+- You'll get a URL like `https://saniasingh211.github.io/repo-name/`
+- Link to it from `research.html` using `target="_blank"`
 
 ---
 
-## Need help?
+## Updating Colours
 
-Come back here and describe what you want changed — I'll do it instantly.
+All colours are CSS variables in `styles.css` under `:root`. The key ones:
+
+| Variable | Used for |
+|---|---|
+| `--accent` | Links, highlights, accent lines |
+| `--bg` | Page background |
+| `--bg2` | Alternate section background |
+| `--text` | Body text |
+| `--muted` | Secondary text |
+
+---
+
+## Adding a New Essay to the Index
+
+After writing an essay, add it to `blog.html` — duplicate one of the `.post-item` blocks and update the `href`, title, tag, date and excerpt.

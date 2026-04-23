@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <nav id="nav">
   <a class="nav-name" href="index.html">Sania Singh</a>
   <ul class="nav-links">
@@ -52,9 +51,9 @@
         and expressing my true feelings about all of it.
       </p>
       <p class="reveal d3">
-        For years, there are many things I have wanted to say out loud. 
-        I realized I have a voice, and this is the first time I've decided 
-        to harness it's full power. 
+        For years, there are many things I have wanted to say out loud.
+        I realized I have a voice, and this is the first time I've decided
+        to harness its full power.
         No filter. No compromise. Just my voice, my instruments,
         and everything I had to say, in one album.
       </p>
@@ -67,7 +66,7 @@
 </section>
 
 <!-- INSTRUMENTS -->
-<section id="instruments">
+<section id="instruments" style="background:var(--bg2);">
   <div class="section-header reveal">
     <span class="section-num">02</span>
     <span class="section-title">Instruments</span>
@@ -119,11 +118,11 @@
   </div>
 </section>
 
-<!-- LISTEN -->
+<!-- LISTEN / SOUNDCLOUD -->
 <section id="listen">
   <div class="section-header reveal">
     <span class="section-num">03</span>
-    <span class="section-title">Listen</span>
+    <span class="section-title">Listen on SoundCloud</span>
     <div class="section-rule"></div>
   </div>
   <div class="listen-layout">
@@ -139,24 +138,107 @@
     </div>
     <div class="sc-wrap reveal d1">
       <iframe
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/osania-singso&color=%23c8a96e&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        height="400">
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/osania-singso&color=%236FA3B5&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+        height="200">
       </iframe>
     </div>
   </div>
 </section>
 
-<!-- LIVE -->
-<section id="live">
+<!-- TRACKS — MP3 FILES -->
+<!--
+  HOW TO ADD A TRACK:
+  1. Place your .mp3 file in a folder called  music/  next to this file.
+  2. Duplicate one of the .track-item blocks below.
+  3. Update the <source src="..."> path, the title, and the date/note.
+  4. Save and refresh.
+-->
+<section id="tracks" style="background:var(--bg2);">
   <div class="section-header reveal">
     <span class="section-num">04</span>
-    <span class="section-title">Live & Performances</span>
+    <span class="section-title">Tracks</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="tracks-list">
+
+    <!-- EXAMPLE TRACK — replace src with real path, e.g. music/song-title.mp3 -->
+    <!--
+    <div class="track-item">
+      <div>
+        <div class="track-title">Song Title</div>
+        <div class="track-meta">Demo · Month Year</div>
+      </div>
+      <div class="track-audio">
+        <audio controls preload="none">
+          <source src="music/song-title.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+    -->
+
+    <div class="upload-hint reveal">
+      <strong style="color:var(--text);font-weight:400;display:block;margin-bottom:8px;">Adding your own tracks</strong>
+      Create a folder called <code>music/</code> next to this file, drop your <code>.mp3</code> files in,
+      then uncomment and duplicate the track block above for each one —
+      just update the <code>src</code> path, title and date. No server needed.
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEOS — YOUTUBE -->
+<!--
+  HOW TO ADD A YOUTUBE VIDEO:
+  1. Go to your YouTube video → Share → Embed → copy the src URL (looks like https://www.youtube.com/embed/VIDEOID)
+  2. Duplicate a .yt-item block below and paste the URL into iframe src.
+  3. Update the title and note text.
+-->
+<section id="videos">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <span class="section-title">Videos</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="yt-grid">
+
+    <!-- EXAMPLE VIDEO — replace src with your YouTube embed URL -->
+    <!--
+    <div class="yt-item reveal d1">
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <div class="yt-item-label">
+        <strong>Video Title</strong>
+        Live at venue · Month Year
+      </div>
+    </div>
+    -->
+
+    <div class="upload-hint reveal" style="max-width:640px;">
+      <strong style="color:var(--text);font-weight:400;display:block;margin-bottom:8px;">Adding YouTube videos</strong>
+      On YouTube: <strong style="color:var(--text);font-weight:400;">Share → Embed</strong> — copy the URL from the <code>src=""</code> attribute
+      (it looks like <code>https://www.youtube.com/embed/VIDEOID</code>).
+      Paste it into the <code>iframe src</code> in the commented block above, then uncomment it.
+    </div>
+
+  </div>
+</section>
+
+<!-- LIVE -->
+<section id="live" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
+    <span class="section-title">Live &amp; Performances</span>
     <div class="section-rule"></div>
   </div>
   <div class="live-grid">
     <div class="live-card reveal d1">
       <p class="live-card-year">2023–2025</p>
-      <h3>London Venues & Open Mics</h3>
+      <h3>London Venues &amp; Open Mics</h3>
       <p>Performed at multiple London venues and open mic nights — original material, solo sets, and collaborations.</p>
     </div>
     <div class="live-card reveal d2">
@@ -179,8 +261,13 @@
 </footer>
 
 <script>
-window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
-const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries =>
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1 }
+);
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>

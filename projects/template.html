@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Name — Sania Singh</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-name" href="../index.html">Sania Singh</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../music.html">Music</a></li>
+    <li><a href="../research.html" class="active">Research</a></li>
+    <li><a href="../blog.html">Writing</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <p class="page-hero-label">Project — Research</p>
+    <!-- EDIT: replace with your repo/project name -->
+    <h1>Project <em>Title</em></h1>
+    <p class="page-hero-sub">
+      <!-- EDIT: one-line description of what this project does -->
+      A short description of the project and its aims.
+    </p>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <span class="section-title">Overview</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <!-- EDIT: paste your README or project description here -->
+      <h2 class="reveal">What this<br>project <em>does.</em></h2>
+      <p class="reveal d1">
+        Describe the project in plain English. What problem does it solve?
+        What methods does it use? What did you build?
+      </p>
+      <p class="reveal d2">
+        Add more paragraphs as needed. You can also paste your GitHub README content here.
+      </p>
+
+      <!-- EDIT: link to the actual GitHub repo -->
+      <a href="https://github.com/saniasingh211" target="_blank" class="project-link reveal d3" style="margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;">
+        View on GitHub →
+      </a>
+    </div>
+    <div class="thesis-stack reveal d2">
+      <!-- EDIT: list the languages/tools used -->
+      <h3>Stack</h3>
+      <div class="stack-item"><span class="stack-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.9"></div></div></div>
+      <div class="stack-item"><span class="stack-name">NumPy</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.85"></div></div></div>
+      <!-- duplicate stack-item rows as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS / RESULTS -->
+<section id="details" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">Details</span>
+    <div class="section-rule"></div>
+  </div>
+  <div style="max-width:720px;">
+    <!-- EDIT: add results, methodology, figures, or embed screenshots -->
+    <p class="reveal" style="font-size:15px;line-height:1.95;color:var(--muted);">
+      Describe your methodology, results, or key findings here. You can also
+      embed images by adding: &lt;img src="../path/to/image.png" style="width:100%;margin-bottom:24px;"&gt;
+    </p>
+  </div>
+</section>
+
+<footer>
+  <a href="../research.html">← Research</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="../index.html">Home →</a>
+</footer>
+
+<script>
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.stack-bar').forEach(b =>
+        b.style.transform = `scaleX(${b.dataset.w})`
+      );
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

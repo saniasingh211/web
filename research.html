@@ -72,53 +72,53 @@
     </div>
   </div>
 </section>
-<!--github-->
-<div class="research-intro-layout">
 
-  <div class="project-card">
-    <div class="project-icon">⟶</div>
-    <p class="project-tag">Codebase</p>
-
-    <h3>GitHub</h3>
-
-    <p>
-      Full collection of my computational work and research implementations.
-    </p>
-
-    <div class="project-detail">
-      Python · Numerical Methods · Scientific Computing
+<!-- GITHUB -->
+<section id="github" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">Code &amp; Repositories</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="github-layout">
+    <div class="project-card reveal d1">
+      <div class="project-icon">⟶</div>
+      <p class="project-tag">Codebase</p>
+      <h3>GitHub</h3>
+      <p>Full collection of my computational work — numerical solvers, data pipelines, research implementations.</p>
+      <div class="project-detail">Python · Numerical Methods · Scientific Computing</div>
+      <a href="https://github.com/saniasingh211" target="_blank" class="project-link">View Profile →</a>
     </div>
-
-    <a href="https://github.com/saniasingh211" target="_blank">
-      View Repository →
-    </a>
-  </div>
-
-  <div class="research-intro-text">
-    <p>
-      This repository contains the full body of my computational work — from
-      numerical solvers and simulations to data analysis pipelines.
-    </p>
-
-    <p>
-      Rather than isolated projects, it reflects a continuous approach to
-      problem-solving in physics: building tools that make complex systems
-      tractable and measurable.
-    </p>
-
-    <p> Projects include BSc and MSc thesis, data driven astrophysics. Actively 
-      adding more to this repo. 
-    </p>
-  </div>
-
-</div>
-
+    <div class="reveal d2">
+      <p style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:18px;">
+        This repository contains the full body of my computational work — from
+        numerical solvers and simulations to data analysis pipelines.
+      </p>
+      <p style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:18px;">
+        Rather than isolated projects, it reflects a continuous approach to
+        problem-solving in physics: building tools that make complex systems
+        tractable and measurable.
+      </p>
+      <p style="font-size:15px;line-height:1.95;color:var(--muted);">
+        Projects include BSc and MSc thesis work, data-driven astrophysics,
+        and ongoing research. Actively updated.
+      </p>
+      <!--
+        TO ADD A REPO AS A SUB-PAGE:
+        1. Duplicate one of the files in projects/ (e.g. projects/template.html)
+        2. Rename it to match your repo (e.g. projects/firedrake-fem.html)
+        3. Fill in the title, description and embed your README or screenshots
+        4. Link to it here:
+        <a href="projects/your-repo.html" class="project-link" style="margin-top:24px;">View Project →</a>
+      -->
+    </div>
   </div>
 </section>
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal">
-    <span class="section-num">02</span>
+    <span class="section-num">03</span>
     <span class="section-title">Research Projects</span>
     <div class="section-rule"></div>
   </div>
@@ -155,10 +155,10 @@
 </section>
 
 <!-- THESIS -->
-<section id="thesis">
+<section id="thesis" style="background:var(--bg2);">
   <div class="section-header reveal">
-    <span class="section-num">03</span>
-    <span class="section-title">MSc Thesis & Technical Work</span>
+    <span class="section-num">04</span>
+    <span class="section-title">MSc Thesis &amp; Technical Work</span>
     <div class="section-rule"></div>
   </div>
   <div class="thesis-layout">
@@ -180,11 +180,11 @@
         computational research.
       </p>
       <div class="module-list reveal d3">
-        <div class="module-item"><span class="module-name">Advanced Probability & Group Theory</span><span class="module-score">95%</span></div>
+        <div class="module-item"><span class="module-name">Advanced Probability &amp; Group Theory</span><span class="module-score">95%</span></div>
         <div class="module-item"><span class="module-name">Computational Quantum Mechanics</span><span class="module-score">86%</span></div>
         <div class="module-item"><span class="module-name">Numerical ODEs</span><span class="module-score">91%</span></div>
         <div class="module-item"><span class="module-name">Finite Element Methods</span><span class="module-score">76%</span></div>
-        <div class="module-item"><span class="module-name">Linear Algebra & Tensor Analysis</span><span class="module-score">76%</span></div>
+        <div class="module-item"><span class="module-name">Linear Algebra &amp; Tensor Analysis</span><span class="module-score">76%</span></div>
       </div>
     </div>
     <div class="thesis-stack reveal d2">
@@ -201,7 +201,7 @@
 <!-- PHD -->
 <section id="phd">
   <div class="section-header reveal">
-    <span class="section-num">04</span>
+    <span class="section-num">05</span>
     <span class="section-title">PhD — Next Chapter</span>
     <div class="section-rule"></div>
   </div>
@@ -242,15 +242,19 @@
 </footer>
 
 <script>
-window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if(e.isIntersecting) {
+    if (e.isIntersecting) {
       e.target.classList.add('visible');
-      e.target.querySelectorAll('.stack-bar').forEach(b => b.style.transform = `scaleX(${b.dataset.w})`);
+      e.target.querySelectorAll('.stack-bar').forEach(b =>
+        b.style.transform = `scaleX(${b.dataset.w})`
+      );
     }
   });
-}, {threshold:0.1});
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>

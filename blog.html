@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <nav id="nav">
   <a class="nav-name" href="index.html">Sania Singh</a>
   <ul class="nav-links">
@@ -22,7 +21,7 @@
 
 <div class="page-hero">
   <div>
-    <p class="page-hero-label">05 — Writing</p>
+    <p class="page-hero-label">04 — Writing</p>
     <h1>The <em>Writing</em></h1>
     <p class="page-hero-sub">Essays, notes and reflections — on music, science, life, and the places they overlap.</p>
   </div>
@@ -35,7 +34,7 @@
     <span class="section-title">Featured Essay</span>
     <div class="section-rule"></div>
   </div>
-  <div class="featured-card reveal">
+  <a href="writing/on-making-music-while-studying-the-universe.html" class="featured-card reveal">
     <div class="feat-meta">
       <span class="feat-tag">Essay</span>
       <span class="feat-date">March 2025</span>
@@ -46,7 +45,7 @@
       <span class="read-label">Read Essay</span>
       <span class="read-arrow">→</span>
     </div>
-  </div>
+  </a>
 </section>
 
 <!-- ALL POSTS -->
@@ -59,7 +58,7 @@
   <div class="posts-layout">
     <div class="posts-list">
 
-      <div class="post-item reveal">
+      <a href="writing/what-ligo-taught-me-about-listening.html" class="post-item reveal">
         <span class="post-num">01</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Science</span><span class="post-date">January 2025</span></div>
@@ -67,9 +66,9 @@
           <p class="post-excerpt">A gravitational wave is just a very quiet sound. The machine that hears it is four kilometres long and must be isolated from every vibration on earth. I think about that when I'm recording vocals.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
-      <div class="post-item reveal d1">
+      <a href="writing/why-i-started-studying-law.html" class="post-item reveal d1">
         <span class="post-num">02</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Life</span><span class="post-date">December 2024</span></div>
@@ -77,9 +76,9 @@
           <p class="post-excerpt">Not to become a lawyer — at least not yet. But because music, science, and justice are all systems of rules that occasionally break down in beautiful ways. And because I needed to understand what had happened to me.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
-      <div class="post-item reveal d2">
+      <a href="writing/moving-to-london-with-a-guitar-and-a-python-script.html" class="post-item reveal d2">
         <span class="post-num">03</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Music</span><span class="post-date">October 2024</span></div>
@@ -87,9 +86,9 @@
           <p class="post-excerpt">Two very different things that both ended up defining my years at Imperial. One was for my thesis. One was for my sanity. I still can't always tell which was which.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
-      <div class="post-item reveal d3">
+      <a href="writing/neutron-stars-and-why-i-find-them-deeply-romantic.html" class="post-item reveal d3">
         <span class="post-num">04</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Science</span><span class="post-date">August 2024</span></div>
@@ -97,9 +96,9 @@
           <p class="post-excerpt">Two dead stars, orbiting each other for billions of years, until they finally collide and create gold. If that isn't a love story, I don't know what is.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
-      <div class="post-item reveal">
+      <a href="writing/on-being-a-woman-in-physics.html" class="post-item reveal">
         <span class="post-num">05</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Life</span><span class="post-date">June 2024</span></div>
@@ -107,9 +106,9 @@
           <p class="post-excerpt">The things people say, and the things they don't. The rooms you have to walk into twice — once to enter, once to be seen. A record, not a complaint.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
-      <div class="post-item reveal d1">
+      <a href="writing/what-it-means-to-produce-your-own-album.html" class="post-item reveal d1">
         <span class="post-num">06</span>
         <div class="post-body">
           <div class="post-meta"><span class="post-tag">Music</span><span class="post-date">April 2024</span></div>
@@ -117,7 +116,7 @@
           <p class="post-excerpt">Nobody tells you how lonely it is. Nobody tells you how free it is either. Both are true at the same time, which is maybe the whole point of making something.</p>
           <div class="post-read">Read <span>→</span></div>
         </div>
-      </div>
+      </a>
 
     </div>
 
@@ -125,11 +124,11 @@
     <div class="sidebar reveal d1">
       <div class="sidebar-section">
         <div class="sidebar-title">Topics</div>
-        <span class="sidebar-tag active">All</span>
-        <span class="sidebar-tag">Music</span>
-        <span class="sidebar-tag">Science</span>
-        <span class="sidebar-tag">Life</span>
-        <span class="sidebar-tag">Law</span>
+        <span class="sidebar-tag active" data-filter="all">All</span>
+        <span class="sidebar-tag" data-filter="Music">Music</span>
+        <span class="sidebar-tag" data-filter="Science">Science</span>
+        <span class="sidebar-tag" data-filter="Life">Life</span>
+        <span class="sidebar-tag" data-filter="Law">Law</span>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-title">Elsewhere</div>
@@ -152,15 +151,25 @@
 </footer>
 
 <script>
-window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
-const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.1});
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries =>
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1 }
+);
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Sidebar tag filter (visual only for now)
+// Sidebar tag filter
 document.querySelectorAll('.sidebar-tag').forEach(tag => {
   tag.addEventListener('click', () => {
     document.querySelectorAll('.sidebar-tag').forEach(t => t.classList.remove('active'));
     tag.classList.add('active');
+    const filter = tag.dataset.filter;
+    document.querySelectorAll('.post-item').forEach(item => {
+      const postTag = item.querySelector('.post-tag')?.textContent || '';
+      item.style.display = (filter === 'all' || postTag === filter) ? '' : 'none';
+    });
   });
 });
 </script>
