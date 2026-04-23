@@ -88,11 +88,12 @@ nav.scrolled { background: rgba(15,14,13,0.96); backdrop-filter: blur(12px); }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-/* ── SECTION BASE ── */
-section { position: relative; z-index: 1; padding: 100px 56px; }
+
+/* ── SECTION BASE ── (TIGHTER) */
+section { position: relative; z-index: 1; padding: 60px 56px; }
 
 .section-header {
-  display: flex; align-items: baseline; gap: 16px; margin-bottom: 64px;
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 36px;
 }
 .section-num   { font-size: 10px; letter-spacing: 0.22em; color: var(--accent); }
 .section-title { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
@@ -460,11 +461,13 @@ footer a:hover { color: var(--accent); }
 
 /* ── MUSIC LAYOUT REFINEMENT ── */
 
-/* ALBUM SECTION */
+
+
+/* ── MUSIC PAGE ── */
 .album-layout {
   display: grid;
   grid-template-columns: 260px 1fr;
-  gap: 60px;
+  gap: 80px;                    /* ← INCREASED */
   align-items: center;
   max-width: 1000px;
 }
@@ -532,14 +535,21 @@ footer a:hover { color: var(--accent); }
   display: block;
 }
 
+/* ── LIVE CARDS GRID ── */
+.live-grid {
+  display: grid;
+  gap: 48px 0;                          /* Vertical gap only */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  max-width: 1000px;
+}
 
 /* MOBILE */
 @media (max-width: 900px) {
-  .album-layout,
-  .listen-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+  nav { padding: 22px 24px; }
+  .nav-links { display: none; }
+  section, .page-hero { padding: 48px 24px; }  /* ← TIGHTER */
+  .album-layout, .listen-layout { gap: 48px; }
+  .live-grid { gap: 36px 0; }
 
   .sc-wrap iframe {
     height: 180px;
