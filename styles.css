@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
+html {
+  font-size: 18px;
+}
 :root {
   --bg:     #000000;
   --bg2:    #0a0a0a;
