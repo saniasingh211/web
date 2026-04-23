@@ -7,16 +7,43 @@
 
 /* ── TOKENS ── */
 :root {
-  --bg:     #0f0e0d;
-  --bg2:    #131210;
-  --card:   #1c1a18;
-  --text:   #e8e2d9;
-  --muted:  #a09488;   /* was #6e6860 — much more readable */
-  --accent: #c8a96e;
-  --rule:   rgba(200,169,110,0.15);
-  --lines:  block;
+  /* ── BASE ── */
+  --bg:     #0e0c10;
+  --bg2:    #15121a;
+  --card:   #1c1620;
+
+  /* ── TEXT ── */
+  --text:   #f5eef3;      /* soft white with warmth */
+  --muted:  #a79aa4;      /* dusty grey-pink */
+
+  /* ── ACCENTS ── */
+  --accent: #d88aa8;      /* rose pink (main) */
+  --accent-soft: #f2c6d8; /* light blush pink */
+
+  /* ── LINES / STRUCTURE ── */
+  --rule: rgba(216,138,168,0.18);
+
+  /* ── TYPOGRAPHY ── */
   --font:   "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif:  "IM Fell English", Georgia, serif;
+}
+
+/* soften hover interactions */
+a:hover {
+  color: var(--accent-soft);
+}
+
+/* nicer tag interaction */
+.tag:hover {
+  border-color: var(--accent);
+  color: var(--accent-soft);
+}
+
+/* subtle card hover */
+.card:hover,
+.teaser-card:hover,
+.live-card:hover {
+  background: #221a26;
 }
 
 /* ── RESET ── */
