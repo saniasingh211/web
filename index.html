@@ -9,7 +9,7 @@ const TWEAK_DEFAULTS_PLACEHOLDER = true;
 </style>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "obsidian",
+  "theme": "rose_light",
   "accentColor": "#c8a96e",
   "showRuleLines": true
 }/*EDITMODE-END*/;
@@ -24,13 +24,21 @@ obsidian: {
   accent:"#d4a96e", 
   rule:"rgba(212,169,110,0.22)"
 },
+rose_light: { 
+bg:"#fdfbfc", 
+bg2:"#f8f6f7", 
+card:"#f0ebed", 
+text:"#2a1f25",        
+ muted:"#6b5a60",       
+accent:"#d8a8b5", 
+rule:"rgba(216,168,181,0.25)"},
 
 sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
 noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
 }
 
 function applyTheme(p) {
-  const t = THEMES[p.theme] || THEMES.obsidian;
+  const t = THEMES[p.theme] || THEMES.rose_light;
   const acc = p.accentColor || t.accent;
   const r = document.documentElement;
   r.style.setProperty('--bg',   t.bg);
@@ -796,7 +804,8 @@ footer span { font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
   <div class="tp-title">Tweaks</div>
   <div class="tp-label">Color Theme</div>
   <div class="tp-themes">
-    <button class="theme-btn active" data-theme="obsidian">Obsidian</button>
+    <button class="theme-btn active" data-theme="rose_light">Rose_Light/button>
+    <button class="theme-btn" data-theme="obsidian">Obsidian</button>
     <button class="theme-btn" data-theme="sage">Sage</button>
     <button class="theme-btn" data-theme="noir">Noir</button>
   </div>
