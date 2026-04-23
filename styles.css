@@ -6,18 +6,18 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
 html {
-  font-size: 18px;
+  font-size: 30px;
 }
 :root {
-  --bg:     #0e0f11;   /* soft black, slight blue-gray */
-  --bg2:    #14161a;
-  --card:   #1a1d21;
+  --bg:     #0e1012;   /* neutral-dark, no color bias */
+  --bg2:    #15181c;
+  --card:   #1b1f24;
 
-  --text:   #e4e7eb;   /* soft white */
-  --muted:  #9aa3ad;   /* cool gray */
+  --text:   #e6e9ed;   /* soft white */
+  --muted:  #98a2ad;
 
-  --accent: #7aa2f7;   /* muted blue (not loud) */
-  --accent-soft: #a9c1ff;
+  --accent: #5ea0ff;   /* clean blue (no violet) */
+  --accent-soft: #9fc2ff;
 
   --rule: rgba(255,255,255,0.08);
 
