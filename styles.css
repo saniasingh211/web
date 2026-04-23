@@ -179,7 +179,7 @@ p {
   margin-top: 36px;
 
   font-size: 0.9rem;     /* instead of 15px */
-  line-height: 1.6;      /* instead of 1.9 */
+  line-height: 1.9;      /* instead of 1.9 */
 
   color: #b0b8c0;        /* optional but nicer */
   max-width: 440px;      /* slightly wider */
