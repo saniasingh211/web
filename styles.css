@@ -149,10 +149,10 @@ p {
   opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards;
 }
 .page-hero h1 em { font-style: italic; color: var(--accent); font-family: var(--serif); }
+.hero-tagline,
 .page-hero-sub {
-  margin-top: 28px; font-size: 15px; line-height: 1.9;
-  color: var(--muted); max-width: 520px;
-  opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards;
+  max-width: 460px;   /* ↓ narrower */
+  line-height: 1.6;   /* ↓ tighter */
 }
 .page-hero-sub strong { color: var(--text); font-weight: 400; }
 
