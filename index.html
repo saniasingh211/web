@@ -9,102 +9,39 @@ const TWEAK_DEFAULTS_PLACEHOLDER = true;
 </style>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "rose_light",
-  "accentColor": "#d8a8b5",
+  "theme": "obsidian",
+  "accentColor": "#c8a96e",
   "showRuleLines": true
 }/*EDITMODE-END*/;
 
 const THEMES = {
-  obsidian: { 
-    bg:"#000000",      // Pure dark black
-    bg2:"#0a0a0a",     // Deep black
-    card:"#151515",    // Rich black card
-    text:"#f5f5f5",    // Soft white text
-    muted:"#a0a0a0",   // Clean muted
-    accent:"#d8a8b5",  // Rose pink (dark)
-    rule:"rgba(216,168,181,0.25)"
-  },
-  rose_light: { 
-    bg:"#fdfbfc", 
-    bg2:"#f8f6f7", 
-    card:"#f0ebed", 
-    text:"#2a1f25",        
-    muted:"#6b5a60",       
-    accent:"#d8a8b5", 
-    rule:"rgba(216,168,181,0.25)"
-  },
+  obsidian: { bg:"#0f0e0d", bg2:"#131210", card:"#1c1a18", text:"#e8e2d9", muted:"#6e6860", accent:"#c8a96e", rule:"rgba(200,169,110,0.12)" },
   sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
   noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
-}
-  obsidian: { 
-    bg:"#080808", 
-    bg2:"#121010", 
-    card:"#1e1c1a", 
-    text:"#f8f8f8",        
-    muted:"#c0c0c0",       
-    accent:"#d4a96e", 
-    rule:"rgba(212,169,110,0.22)"
-  },
-  rose_light: { 
-    bg:"#fdfbfc", 
-    bg2:"#f8f6f7", 
-    card:"#f0ebed", 
-    text:"#2a1f25",        
-    muted:"#6b5a60",       
-    accent:"#d8a8b5", 
-    rule:"rgba(216,168,181,0.25)"
-  },
-  sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
-  noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
-}
+};
 
 function applyTheme(p) {
-  const t = THEMES[p.theme] || THEMES.rose_light;
+  const t = THEMES[p.theme] || THEMES.obsidian;
   const acc = p.accentColor || t.accent;
   const r = document.documentElement;
-  
-  // ✅ FIXED: These lines were MISSING!
-  r.style.setProperty('--bg', t.bg, 'important');
-  r.style.setProperty('--bg2', t.bg2, 'important');
-  r.style.setProperty('--card', t.card, 'important');
-  r.style.setProperty('--text', t.text, 'important');
-  r.style.setProperty('--muted', t.muted, 'important');
-  r.style.setProperty('--accent', acc, 'important');
-  r.style.setProperty('--rule', t.rule, 'important');
-  r.style.setProperty('--lines', p.showRuleLines ? 'block' : 'none', 'important');
+  r.style.setProperty('--bg',   t.bg);
+  r.style.setProperty('--bg2',  t.bg2);
+  r.style.setProperty('--card', t.card);
+  r.style.setProperty('--text', t.text);
+  r.style.setProperty('--muted',t.muted);
+  r.style.setProperty('--accent', acc);
+  r.style.setProperty('--rule',  t.rule);
+  r.style.setProperty('--lines', p.showRuleLines ? 'block' : 'none');
 }
-
-// ✅ FIXED: Load rose_light by default
-applyTheme(TWEAK_DEFAULTS);
-
-// Tweaks panel functionality
-document.querySelectorAll('.theme-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    TWEAK_DEFAULTS.theme = btn.dataset.theme;
-    TWEAK_DEFAULTS.accentColor = THEMES[TWEAK_DEFAULTS.theme].accent;
-    applyTheme(TWEAK_DEFAULTS);
-    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
-});
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
 :root {
-  --bg: #0b0b0c;
-
-  /* STRONG readable text */
-  --text: #ffffff;
-
-  /* secondary but still readable */
-  --muted: #b3b3b3;
-
-  /* keep your gold */
-  --accent: #c8a96e;
-
-  /* slightly stronger lines */
-  --rule: rgba(200,169,110,0.2);
+  --bg:#0f0e0d; --bg2:#131210; --card:#1c1a18;
+  --text:#e8e2d9; --muted:#6e6860; --accent:#c8a96e;
+  --rule:rgba(200,169,110,0.12); --lines:block;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -626,6 +563,7 @@ footer span { font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
     </a>
   </div>
 </section>
+
 <!-- OLD MUSIC (removed) -->
 <section id="music" style="display:none;">
   <div class="section-header reveal">
@@ -841,8 +779,7 @@ footer span { font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
   <div class="tp-title">Tweaks</div>
   <div class="tp-label">Color Theme</div>
   <div class="tp-themes">
-    <button class="theme-btn active" data-theme="rose_light">Rose_Light/button>
-    <button class="theme-btn" data-theme="obsidian">Obsidian</button>
+    <button class="theme-btn active" data-theme="obsidian">Obsidian</button>
     <button class="theme-btn" data-theme="sage">Sage</button>
     <button class="theme-btn" data-theme="noir">Noir</button>
   </div>
