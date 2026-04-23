@@ -89,7 +89,7 @@ section { position: relative; z-index: 1; padding: 72px 56px; }
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
   min-height: 52vh; display: flex; align-items: flex-end;
-  padding: 0 56px 80px;
+  padding: 120px 56px 80px;
 }
 .page-hero-label {
   font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
