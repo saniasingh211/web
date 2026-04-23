@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
+html {
+  font-size: 18px;
+}
 /* ── TOKENS ── */
 :root {
   --bg:     #0f0e0d;
@@ -47,7 +50,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   overflow-x: hidden;
 }
