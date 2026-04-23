@@ -9,17 +9,19 @@ html {
   font-size: 30px;
 }
 :root {
-  --bg:     #0e1012;   /* neutral-dark, no color bias */
-  --bg2:    #15181c;
-  --card:   #1b1f24;
+  --bg:     #0f0d0b;   /* soil at night */
+  --bg2:    #161310;
+  --card:   #1c1814;
 
-  --text:   #e6e9ed;   /* soft white */
-  --muted:  #98a2ad;
+  --text:   #e7ded2;   /* paper/cream */
+  --muted:  #a39586;   /* ash */
 
-  --accent: #5ea0ff;   /* clean blue (no violet) */
-  --accent-soft: #9fc2ff;
+  --accent: #b26a3d;   /* clay / terracotta */
+  --accent-soft: #d39a74;
 
-  --rule: rgba(255,255,255,0.08);
+  --accent-deep: #7a3f1d; /* burnt earth */
+
+  --rule: rgba(231,222,210,0.10);
 
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "IM Fell English", Georgia, serif;
