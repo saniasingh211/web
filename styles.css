@@ -16,8 +16,10 @@ html {
   --text:   #e6e8eb;
   --muted:  #9aa3ad;
 
-  --accent: #6b8cae;   /* dusty steel blue */
-  --rule:   rgba(255,255,255,0.08);
+  --accent: #b07a86;
+  --accent-soft: #d1a5ae;
+
+  --rule: rgba(255,255,255,0.08);
 
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "IM Fell English", Georgia, serif;
