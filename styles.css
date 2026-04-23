@@ -4,20 +4,22 @@
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+
 :root {
-  --bg:     #0b0f0c;   /* black with green undertone */
-  --bg2:    #121713;
-  --card:   #171d19;
+  --bg:     #000000;
+  --bg2:    #0a0a0a;
+  --card:   #111111;
 
-  --text:   #e6efe9;
-  --muted:  #8fa39a;
+  --text:   #f5f7f6;   /* near-white, not harsh */
+  --cream:  #e8e1d6;   /* warm secondary */
+  --muted:  #9aa39f;
 
-  --accent: #4daA7f;       /* calm, natural green */
-  --accent-soft: #8fd1b3;
+  --accent: #00c875;   /* sharp, modern green */
+  --accent-soft: #5ee6a8;
 
-  --accent-deep: #2f7a5a;  /* for hover / depth */
+  --accent-deep: #009e5c;
 
-  --rule: rgba(160, 200, 180, 0.12);
+  --rule: rgba(255,255,255,0.08);
 
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "IM Fell English", Georgia, serif;
