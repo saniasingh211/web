@@ -611,3 +611,9 @@ footer a:hover { color: var(--accent); }
     height: 180px;
   }
 }
+
+.portrait-blank {
+  width: 100%;
+  height: 100%;
+  background: var(--card);
+}
