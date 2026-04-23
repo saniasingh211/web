@@ -174,11 +174,19 @@ p {
   opacity: 0; animation: fadeUp 0.9s ease 0.35s forwards;
 }
 .hero-name em { font-style: italic; color: var(--accent); font-family: var(--serif); }
+
 .hero-tagline {
-  margin-top: 36px; font-size: 15px; line-height: 1.9;
-  color: var(--muted); max-width: 420px;
-  opacity: 0; animation: fadeUp 0.9s ease 0.55s forwards;
+  margin-top: 36px;
+
+  font-size: 0.9rem;     /* instead of 15px */
+  line-height: 1.6;      /* instead of 1.9 */
+
+  color: #b0b8c0;        /* optional but nicer */
+  max-width: 440px;      /* slightly wider */
 }
+
+
+
 .hero-tagline strong { color: var(--text); font-weight: 400; }
 .hero-ctas {
   margin-top: 44px; display: flex; gap: 20px; align-items: center;
