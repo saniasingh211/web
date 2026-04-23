@@ -65,14 +65,31 @@ nav.scrolled { background: rgba(15,14,13,0.96); backdrop-filter: blur(12px); }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
 /* ── SECTION BASE ── */
-section { position: relative; z-index: 1; padding: 100px 56px; }
+section {
+  position: relative;
+  z-index: 1;
+  padding: 120px 56px;
+}
+
+section + section {
+  border-top: 1px solid var(--rule);
+  margin-top: 40px;
+}
 
 .section-header {
   display: flex; align-items: baseline; gap: 16px; margin-bottom: 64px;
 }
 .section-num   { font-size: 10px; letter-spacing: 0.22em; color: var(--accent); }
 .section-title { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
-.section-rule  { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule), transparent); margin-left: 8px; }
+.section-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--rule),
+    rgba(200,169,110,0.2),
+    transparent
+  );
+}
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
