@@ -5,19 +5,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 :root {
-  --bg:     #0b0d10;   /* near-black with blue bias */
-  --bg2:    #12161b;
-  --card:   #171c22;
+  --bg:     #0b0f0c;   /* black with green undertone */
+  --bg2:    #121713;
+  --card:   #171d19;
 
-  --text:   #e6edf3;
-  --muted:  #8b98a5;
+  --text:   #e6efe9;
+  --muted:  #8fa39a;
 
-  --accent: #4c8dff;       /* clean primary blue */
-  --accent-soft: #8fb8ff;
+  --accent: #4daA7f;       /* calm, natural green */
+  --accent-soft: #8fd1b3;
 
-  --accent-deep: #2f6fe0;  /* for hover depth */
+  --accent-deep: #2f7a5a;  /* for hover / depth */
 
-  --rule: rgba(120, 160, 220, 0.14);
+  --rule: rgba(160, 200, 180, 0.12);
 
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "IM Fell English", Georgia, serif;
