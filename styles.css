@@ -13,6 +13,9 @@
   /* ── TEXT ── */
   --text:   #EAF3F9;
   --muted:  #A7B4C0;
+  --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 
+        "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  --serif: "IM Fell English", Georgia, serif;
 
   /* ── ACCENT (OCEAN-BASED) ── */
   --accent: #6FA3B5;        /* ocean blue */
