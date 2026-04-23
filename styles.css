@@ -33,6 +33,10 @@
 
   /* ── TEXT ON ACCENT ── */
   --accent-text: #FFFFFF;
+
+  --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, 
+          "Segoe UI", Roboto, Inter, Arial, sans-serif;
+
 }
 
 .nav-links a {
