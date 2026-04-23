@@ -8,38 +8,62 @@
 /* ── TOKENS ── */
 /* ── TOKENS ── (DARK OCEAN + HELVETICA) */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Helvetica+Neue:wght@300;400;500;700&display=swap');
-/* ── TOKENS ── (DARK SLATE + BLUE) */
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Helvetica+Neue:wght@300;400;500;700&display=swap');
+
+
 :root {
   /* ── BACKGROUNDS ── */
-  --bg:     #29353C;
-  --bg2:    #3A4A54;
-  --card:   rgba(170, 199, 216, 0.14);
+  --bg:     #0B0F12;   /* near-black */
+  --bg2:    #12171B;   /* subtle elevation */
+  --nav:    #080C0F;   /* darker than bg → sits "above" */
+
+  --card:   #11161A;   /* solid, no frost */
 
   /* ── TEXT ── */
-  --text:   #EAF4FB;
-  --muted:  #9FB6C4;
+  --text:   #E6EDF3;   /* soft white */
+  --muted:  #8B98A5;   /* gray-blue */
 
-  /* ── PRIMARY ACCENT (COOL / STRUCTURE) ── */
-  --accent: #38BDF8;
-  --accent-strong: #0EA5E9;
-  --accent-glow: rgba(56, 189, 248, 0.35);
+  /* ── ACCENTS ── */
+  --accent: #3B82F6;   /* clean blue */
+  --accent-strong: #2563EB;
+  --accent-soft: #93C5FD;
 
-  /* ── CONTRAST ACCENT (ATTENTION) ── */
-  --accent-warm: #F59E0B;        /* amber */
-  --accent-warm-soft: #FCD34D;
-
-  /* ── SURFACES ── */
-  --rule: rgba(234,244,251,0.12);
-  --glass-border: rgba(255,255,255,0.08);
-
-  /* ── FROST ── */
-  --frost-strong: rgba(170, 199, 216, 0.22);
-  --frost-light:  rgba(170, 199, 216, 0.08);
+  /* ── LINES / STRUCTURE ── */
+  --rule: rgba(255,255,255,0.06);
+  --edge: rgba(255,255,255,0.08);
 
   /* ── TEXT ON ACCENT ── */
-  --accent-text: #0b1a22;
+  --accent-text: #FFFFFF;
 }
+
+.nav-links a {
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a.active {
+  color: var(--text);
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+}
+
+
+
+
+
+
 
 /* .tag {
   border-color: var(--rule);
