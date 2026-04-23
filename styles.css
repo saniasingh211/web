@@ -598,3 +598,7 @@ footer a:hover { color: var(--accent); }
 .article-body {
   max-width: 900px;
 }
+
+.article-hero {
+  padding: 120px 56px 72px;
+}
