@@ -15,9 +15,19 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 }/*EDITMODE-END*/;
 
 const THEMES = {
-  obsidian: { bg:"#0f0e0d", bg2:"#131210", card:"#1c1a18", text:"#e8e2d9", muted:"#6e6860", accent:"#c8a96e", rule:"rgba(200,169,110,0.12)" },
-  sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
-  noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
+obsidian: { 
+  bg:"#0f0e0d", 
+  bg2:"#131210", 
+  card:"#1c1a18", 
+
+  text:"#ffffff",        // 🔥 main text = crisp
+  muted:"#b0aba3",       // 🔥 readable secondary
+
+  accent:"#c8a96e", 
+  rule:"rgba(200,169,110,0.18)" // slightly stronger lines
+},
+sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
+noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
 };
 
 function applyTheme(p) {
