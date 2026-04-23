@@ -9,8 +9,8 @@
 const SITE_CONTENT = {
 
   // ── YOUR DETAILS ──────────────────────────────────────────
-  name:       "Sania Singhs",
-  email:      "saniasingh721@gmail.com",
+  name:       "Sania Singh",
+  email:      "saniasingh@gmail.com",
   instagram:  "https://instagram.com/sania_sings",
   soundcloud: "https://soundcloud.com/osania-singso",
   tagline:    "Musician · Scientist · Writer",
