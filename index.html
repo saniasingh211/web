@@ -23,7 +23,7 @@ function applyTheme(p) {
   const acc = p.accentColor || t.accent;
   const r = document.documentElement;
   r.style.setProperty('--bg',   t.bg);
-  r.style.setProperty('--bg2',  t.bg2);
+  r.style.setProperty('--bg-soft', t.bg2);;
   r.style.setProperty('--card', t.card);
   r.style.setProperty('--text', t.text);
   r.style.setProperty('--muted',t.muted);
@@ -372,55 +372,12 @@ function applyTheme(p) {
   <span>Musician · Scientist · Writer</span>
 </footer>
 
-<!-- TWEAKS -->
-<div id="tweaks-panel">
-  <div class="tp-title">Tweaks</div>
-  <div class="tp-label">Color Theme</div>
-  <div class="tp-themes">
-    <button class="theme-btn active" data-theme="obsidian">Obsidian</button>
-    <button class="theme-btn" data-theme="sage">Sage</button>
-    <button class="theme-btn" data-theme="noir">Noir</button>
-  </div>
-  <div class="tp-toggle">
-    <span class="tp-toggle-label">Rule Lines</span>
-    <div class="sw on" id="rule-sw"></div>
-  </div>
-</div>
-
 <script>
-// Init
-let prefs = { ...TWEAK_DEFAULTS };
-applyTheme(prefs);
-
-// Tweaks protocol
-window.addEventListener('message', e => {
-  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').classList.add('open');
-  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').classList.remove('open');
-});
-window.parent.postMessage({ type: '__edit_mode_available' }, '*');
-
-document.querySelectorAll('.theme-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    prefs.theme = btn.dataset.theme;
-    prefs.accentColor = THEMES[prefs.theme].accent;
-    applyTheme(prefs);
-    document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { theme: prefs.theme, accentColor: prefs.accentColor } }, '*');
-  });
-});
-
-const ruleSw = document.getElementById('rule-sw');
-ruleSw.addEventListener('click', () => {
-  prefs.showRuleLines = !prefs.showRuleLines;
-  ruleSw.classList.toggle('on', prefs.showRuleLines);
-  applyTheme(prefs);
-  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { showRuleLines: prefs.showRuleLines } }, '*');
-});
-
 // Nav scroll
 const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+window.addEventListener('scroll', () => 
+  nav.classList.toggle('scrolled', window.scrollY > 60)
+);
 
 // Scroll reveals
 const obs = new IntersectionObserver(entries => {
@@ -433,7 +390,9 @@ const obs = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.1 });
+
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+
 </body>
 </html>
