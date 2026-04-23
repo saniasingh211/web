@@ -1,56 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>On Making Music While Studying the Universe — Sania Singh</title>
-<link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-
-<nav id="nav">
-  <a class="nav-name" href="../index.html">Sania Singh</a>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../music.html">Music</a></li>
-    <li><a href="../research.html">Research</a></li>
-    <li><a href="../blog.html" class="active">Writing</a></li>
-    <li><a href="../index.html#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="article-hero">
-  <div>
-    <div class="article-meta">
-      <span class="article-tag">Essay</span>
-      <span class="article-date">March 2025</span>
-    </div>
-    <h1>On Making Music While<br>Studying the <em>Universe</em></h1>
-  </div>
-</div>
-
-<div class="article-body">
-  <div class="article-placeholder">
-    <p>Your essay content goes here. Write directly into this file — replace this block with your text.</p>
-  </div>
-
-  <a href="../blog.html" class="article-back">← Back to Writing</a>
-</div>
-
-<footer>
-  <a href="../blog.html">← Writing</a>
-  <span>© 2026 Sania Singh</span>
-  <a href="../index.html">Home →</a>
-</footer>
-
-<script>
-window.addEventListener('scroll', () =>
-  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
-);
-</script>
-</body>
-</html> -->
-
+<!DOCTYPE html>
 <div class="article-content">
 
   <h2>The Stereo Field as a Coordinate System</h2>
@@ -84,16 +32,15 @@ window.addEventListener('scroll', () =>
 
   <table>
     <tr><th>Frequency Range</th><th>Approx. Hz</th><th>Pan Zone</th></tr>
-    <tr><td>Low</td><td>20 – 250 Hz</td><td>±0 – 10</td></tr>
+    <tr><td>Low (long wavelength)</td><td>20 – 250 Hz</td><td>±0 – 10</td></tr>
     <tr><td>Mid</td><td>250 Hz – 4 kHz</td><td>±20 – 50</td></tr>
-    <tr><td>High</td><td>4 – 20 kHz</td><td>±60 – 100</td></tr>
+    <tr><td>High (short wavelength)</td><td>4 – 20 kHz</td><td>±60 – 100</td></tr>
   </table>
 
-  <!-- IMAGE 1 -->
-  <figure>
-    <img src="../images/pan-frequency-chart.png" alt="Pan width increases with frequency">
-    <figcaption>Width increases with frequency — higher frequencies can be panned wider.</figcaption>
-  </figure>
+  <p>
+    The usable panning range expands as pitch rises — effectively forming a triangular distribution:
+    low frequencies cluster near the center, while high frequencies occupy the edges.
+  </p>
 
   <h4>Axiom 5 — Duplicate elements must diverge</h4>
   <p>Two identical signals centered add in phase (+6 dB). Panning them apart creates width without increasing volume.</p>
@@ -120,16 +67,47 @@ window.addEventListener('scroll', () =>
   <h3>The Frequency–Space Matrix</h3>
   <p>Think of your mix as a 2D grid — pan position on the horizontal axis, frequency on the vertical.</p>
 
-  <!-- IMAGE 2 -->
-  <figure>
-    <img src="../images/frequency-space-matrix.png" alt="Frequency space matrix diagram">
-    <figcaption>The Frequency–Space Matrix — balancing elements across left/right and frequency.</figcaption>
-  </figure>
+  <table>
+    <tr>
+      <th></th>
+      <th>Hard L</th>
+      <th>Left</th>
+      <th>Center</th>
+      <th>Right</th>
+      <th>Hard R</th>
+    </tr>
+    <tr>
+      <th>High</th>
+      <td>Pads</td>
+      <td>Harmonies</td>
+      <td>FX</td>
+      <td>Harmonies</td>
+      <td>Pads</td>
+    </tr>
+    <tr>
+      <th>Mid</th>
+      <td>Guitar</td>
+      <td>BVox</td>
+      <td>Lead vocal</td>
+      <td>BVox</td>
+      <td>Piano</td>
+    </tr>
+    <tr>
+      <th>Low</th>
+      <td>Perc</td>
+      <td>Clap</td>
+      <td>Kick/Bass/Snare</td>
+      <td>Clap</td>
+      <td>Perc</td>
+    </tr>
+  </table>
 
-  <!-- IMAGE 3 -->
+  <p>Goal: no cell empty, no cell overcrowded. Even distribution across both axes.</p>
+
+  <!-- SINGLE IMAGE -->
   <figure>
     <img src="../images/logic-pro-mixer.png" alt="Logic Pro mixer example">
-    <figcaption>Example mix: pan positions across a real session.</figcaption>
+    <figcaption>Real-world example: pan positions across a finished mix.</figcaption>
   </figure>
 
 </div>
