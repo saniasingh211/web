@@ -9,18 +9,15 @@ html {
   font-size: 18px;
 }
 :root {
-  --bg:     #000000;
-  --bg2:    #0a0a0a;
-  --card:   #111111;
+  --bg:     #0e0f11;   /* soft black, slight blue-gray */
+  --bg2:    #14161a;
+  --card:   #1a1d21;
 
-  --text:   #f5f7f6;   /* near-white, not harsh */
-  --cream:  #e8e1d6;   /* warm secondary */
-  --muted:  #9aa39f;
+  --text:   #e4e7eb;   /* soft white */
+  --muted:  #9aa3ad;   /* cool gray */
 
-  --accent: #00c875;   /* sharp, modern green */
-  --accent-soft: #5ee6a8;
-
-  --accent-deep: #009e5c;
+  --accent: #7aa2f7;   /* muted blue (not loud) */
+  --accent-soft: #a9c1ff;
 
   --rule: rgba(255,255,255,0.08);
 
