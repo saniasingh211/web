@@ -64,7 +64,11 @@
 }
 
 
-
+header,
+.nav,
+.navbar {
+  background: var(--nav);
+}
 
 
 
