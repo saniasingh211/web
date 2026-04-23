@@ -578,9 +578,8 @@ footer a:hover { color: var(--accent); }
   height: auto;
   border-radius: 8px;
 }
-
 .pdf-embed {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .pdf-embed iframe {
@@ -588,27 +587,14 @@ footer a:hover { color: var(--accent); }
   height: 85vh;
   border: none;
   border-radius: 12px;
+  display: block;
+  background: #111;
 }
 
-/* spacing for text above */
-.article-placeholder p {
-  margin-bottom: 1.8rem;
+.pdf-embed {
+  margin: 3rem 0;
 }
 
-/* full-width breakout */
-.pdf-full {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-top: 2.5rem;
-}
-
-/* make it feel like a real viewer */
-.pdf-full iframe {
-  width: 100%;
-  height: 92vh;
-  border: none;
-  background: #111; /* avoids white flash */
-}
-.pdf-full iframe {
-  border-radius: 12px;
+.article-body {
+  max-width: 900px;
 }
