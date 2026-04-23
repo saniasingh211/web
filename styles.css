@@ -5,21 +5,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
-
 :root {
   /* ── BASE ── */
-  --bg:     #0E1316;
-  --bg2:    #151B20;
-  --card:   #171F24;
+  --bg:     #0B1114;   /* deeper, cleaner */
+  --bg2:    #121A1F;
+  --card:   #151F25;
 
-  --text:   #EAF2F8;
-  --muted:  #B2BDC7;
+  /* ── TEXT ── */
+  --text:   #EAF3F9;   /* slightly brighter but still soft */
+  --muted:  #A7B4C0;   /* cooler, more distinct */
 
-  --accent: #7FB2E3;
-  --accent-strong: #669ED6;
-  --accent-soft: #A9C7E6;
+  /* ── ACCENT ── */
+  --accent: #6FAEFF;        /* clearer blue signal */
+  --accent-strong: #4C94F0;
+  --accent-soft: #A7CCFF;
 
-  --rule: rgba(255,255,255,0.06);
+  /* ── STRUCTURE ── */
+  --rule: rgba(255,255,255,0.05);
   --edge: rgba(255,255,255,0.08);
 
   --font: "Helvetica Neue", -apple-system, BlinkMacSystemFont;
@@ -34,8 +36,6 @@
 
   --text-soft: color-mix(in srgb, var(--text) 80%, transparent);
   --accent-dim: color-mix(in srgb, var(--accent) 70%, var(--muted));
-
-
 
   --text-strong: var(--text);
   --text-normal: var(--text-soft);
