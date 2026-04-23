@@ -554,7 +554,7 @@ footer a:hover { color: var(--accent); }
   .nav-links { display: none; }
   section { padding: 60px 24px; }
   .page-hero, .article-hero { padding: 0 24px 64px; }
-  .article-body { padding: 0 24px 64px; }
+  .article-body { padding: 10px 24px 24px; }
   #hero { grid-template-columns: 1fr; padding: 0 24px 80px; }
   .hero-right { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
