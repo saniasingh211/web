@@ -62,13 +62,6 @@
 }
 
 
-header,
-.nav,
-.navbar {
-  background: var(--nav);
-}
-
-
 
 
 /* .tag {
@@ -84,7 +77,7 @@ header,
 .card:hover,
 .teaser-card:hover,
 .live-card:hover {
-  background: #221a26;
+  background: var(--bg2);
 }
 
 /* ── RESET ── */
@@ -117,12 +110,14 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; justify-content: space-between; align-items: center;
   padding: 28px 56px;
-  background: linear-gradient(to bottom, var(--bg) 50%, transparent);
-  transition: background 0.4s;
+
+  background: var(--nav);
+  border-bottom: 1px solid var(--rule);
+
+  transition: background 0.3s ease;
 }
-nav.scrolled { 
-  background: rgba(241,245,243,0.97);  /* Sage beach - NOT BLACK */
-  backdrop-filter: blur(12px); 
+nav.scrolled {
+  background: var(--nav);
 }
 .nav-name {
   font-size: 12px; font-weight: 500; letter-spacing: 0.2em;
@@ -427,7 +422,9 @@ footer a:hover { color: var(--accent); }
 
 /* ── BLOG PAGE ── */
 .featured-card { background: var(--card); padding: 64px 56px; position: relative; overflow: hidden; cursor: pointer; transition: background 0.3s; }
-.featured-card:hover { background: #1e1c19; }
+.featured-card:hover {
+  background: var(--bg2);
+}
 .featured-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--accent); transform: scaleX(0); transition: transform 0.5s ease; transform-origin: left; }
 .featured-card:hover::before { transform: scaleX(1); }
 .feat-meta { display: flex; gap: 24px; align-items: center; margin-bottom: 28px; }
@@ -519,18 +516,16 @@ footer a:hover { color: var(--accent); }
   max-width: 1000px;
 }
 .album-art {
-  width: 100%;
-  aspect-ratio: 1;
+  background: var(--card);
+  border: 1px solid var(--edge);
 
-  /* lift it off the background */
-  background: #221a26;
 
+ 
   display: flex;
   align-items: center;
   justify-content: center;
 
   /* stronger, visible edge */
-  border: 1px solid rgba(216,138,168,0.25);
 
   /* depth */
   box-shadow: 0 12px 40px rgba(0,0,0,0.6);
