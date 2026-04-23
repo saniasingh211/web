@@ -39,9 +39,16 @@ function applyTheme(p) {
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
 :root {
-  --bg:#0f0e0d; --bg2:#131210; --card:#1c1a18;
-  --text:#e8e2d9; --muted:#6e6860; --accent:#c8a96e;
-  --rule:rgba(200,169,110,0.12); --lines:block;
+  --bg:#0f0e0d;
+
+  /* MAIN TEXT — brighter */
+  --text:#f5f2ec;
+
+  /* SECONDARY TEXT — less washed out */
+  --muted:#a8a29a;
+
+  /* ACCENT — keep your gold */
+  --accent:#c8a96e;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
