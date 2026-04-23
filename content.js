@@ -9,7 +9,7 @@
 const SITE_CONTENT = {
 
   // ── YOUR DETAILS ──────────────────────────────────────────
-  name:       "Sania Singh",
+  name:       "Sania Singhs",
   email:      "saniasingh721@gmail.com",
   instagram:  "https://instagram.com/sania_sings",
   soundcloud: "https://soundcloud.com/osania-singso",
