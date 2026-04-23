@@ -174,15 +174,14 @@ p {
   opacity: 0; animation: fadeUp 0.9s ease 0.35s forwards;
 }
 .hero-name em { font-style: italic; color: var(--accent); font-family: var(--serif); }
-
 .hero-tagline {
-  margin-top: 36px;
+  margin-top: 32px;
 
-  font-size: 0.9rem;     /* instead of 15px */
-  line-height: 1.9;      /* instead of 1.9 */
+  font-size: 1rem;
+  line-height: 1.65;
 
-  color: #b0b8c0;        /* optional but nicer */
-  max-width: 440px;      /* slightly wider */
+  color: var(--muted);
+  max-width: 520px;
 }
 
 
