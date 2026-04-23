@@ -78,7 +78,10 @@ nav {
   background: linear-gradient(to bottom, var(--bg) 50%, transparent);
   transition: background 0.4s;
 }
-nav.scrolled { background: rgba(15,14,13,0.96); backdrop-filter: blur(12px); }
+nav.scrolled { 
+  background: rgba(241,245,243,0.97);  /* Sage beach - NOT BLACK */
+  backdrop-filter: blur(12px); 
+}
 .nav-name {
   font-size: 12px; font-weight: 500; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--text); text-decoration: none;
