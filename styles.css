@@ -4,7 +4,24 @@
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
+:root {
+  --bg:     #0b0d10;   /* near-black with blue bias */
+  --bg2:    #12161b;
+  --card:   #171c22;
 
+  --text:   #e6edf3;
+  --muted:  #8b98a5;
+
+  --accent: #4c8dff;       /* clean primary blue */
+  --accent-soft: #8fb8ff;
+
+  --accent-deep: #2f6fe0;  /* for hover depth */
+
+  --rule: rgba(120, 160, 220, 0.14);
+
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --serif: "IM Fell English", Georgia, serif;
+}
 .nav-links a:hover {
   color: var(--text);
 }
