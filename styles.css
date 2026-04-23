@@ -5,34 +5,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
 
-html {
-  font-size: 18px;
-}
-/* ── TOKENS ── */
-:root {
-  --bg:     #0f0e0d;
-  --bg2:    #151311;
-  --card:   #1d1a17;
-
-  --text:   #eee6dc;
-  --muted:  #a89f95;
-
-  --accent: #b08a6a;      /* warm bronze */
-  --accent-soft: #d6b89c;
-
-  --rule: rgba(176,138,106,0.18);
-  --font:   "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --serif:  "IM Fell English", Georgia, serif;
-}
-/* soften hover interactions */
-a:hover {
-  color: var(--accent-soft);
+.nav-links a:hover {
+  color: var(--text);
 }
 
-/* nicer tag interaction */
+.tag {
+  border-color: var(--rule);
+}
+
 .tag:hover {
-  border-color: var(--accent);
-  color: var(--accent-soft);
+  border-color: var(--accent-alt);
+  color: var(--accent-alt-soft);
 }
 
 /* subtle card hover */
@@ -50,7 +33,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.6;
   overflow-x: hidden;
 }
