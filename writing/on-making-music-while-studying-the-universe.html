@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -49,4 +49,87 @@ window.addEventListener('scroll', () =>
 );
 </script>
 </body>
-</html>
+</html> -->
+
+<div class="article-content">
+
+  <h2>The Stereo Field as a Coordinate System</h2>
+
+  <h3>The Axis</h3>
+  <p>Think of panning as a number line from −100 to +100. Every sound gets an X-coordinate.</p>
+
+  <table>
+    <tr><th>Position</th><th>Meaning</th></tr>
+    <tr><td>−100</td><td>Hard Left</td></tr>
+    <tr><td>−50</td><td>Left</td></tr>
+    <tr><td>0</td><td>Center</td></tr>
+    <tr><td>+50</td><td>Right</td></tr>
+    <tr><td>+100</td><td>Hard Right</td></tr>
+  </table>
+
+  <p>Your job: distribute elements so no zone is overcrowded and energy is balanced.</p>
+
+  <h3>The Rules as Axioms</h3>
+
+  <h4>Axiom 1 — Low frequencies anchor at X = 0</h4>
+  <p>Bass and kick live at the center. Frequencies below ~80–100 Hz are effectively omnidirectional.</p>
+
+  <h4>Axiom 2 — The centre is load-bearing</h4>
+  <p>X = 0 is a structural column. Overloading it reduces clarity and punch.</p>
+
+  <h4>Axiom 3 — Symmetry ≠ balance</h4>
+  <p>Balance depends on perceived energy, not mirrored positions.</p>
+
+  <h4>Axiom 4 — Width is a function of frequency</h4>
+
+  <table>
+    <tr><th>Frequency Range</th><th>Approx. Hz</th><th>Pan Zone</th></tr>
+    <tr><td>Low</td><td>20 – 250 Hz</td><td>±0 – 10</td></tr>
+    <tr><td>Mid</td><td>250 Hz – 4 kHz</td><td>±20 – 50</td></tr>
+    <tr><td>High</td><td>4 – 20 kHz</td><td>±60 – 100</td></tr>
+  </table>
+
+  <!-- IMAGE 1 -->
+  <figure>
+    <img src="../images/pan-frequency-chart.png" alt="Pan width increases with frequency">
+    <figcaption>Width increases with frequency — higher frequencies can be panned wider.</figcaption>
+  </figure>
+
+  <h4>Axiom 5 — Duplicate elements must diverge</h4>
+  <p>Two identical signals centered add in phase (+6 dB). Panning them apart creates width without increasing volume.</p>
+
+  <blockquote>Two diverged copies &gt; one centred copy.</blockquote>
+
+  <h3>The Placement Map</h3>
+
+  <table>
+    <tr><th>Element</th><th>X Position</th><th>Notes</th></tr>
+    <tr><td>Kick drum</td><td>0</td><td>Never move this</td></tr>
+    <tr><td>Bass guitar / 808</td><td>0</td><td>Never move this</td></tr>
+    <tr><td>Lead vocal</td><td>0</td><td>Anchor of the song</td></tr>
+    <tr><td>Snare</td><td>0 (or ±5)</td><td>Needs to punch centre</td></tr>
+    <tr><td>Lead synth / piano</td><td>0 to ±15</td><td>Slight width ok</td></tr>
+    <tr><td>Claps</td><td>±20 to ±40</td><td>Spread for width</td></tr>
+    <tr><td>Hi-hats</td><td>±30 to ±60</td><td>Alternate L/R</td></tr>
+    <tr><td>Rhythm guitar</td><td>±50 to ±70</td><td>Classic rock: hard pan ±100</td></tr>
+    <tr><td>Backing vocals</td><td>±30 to ±60</td><td>Mirror pairs symmetrically</td></tr>
+    <tr><td>Harmony vocals</td><td>±50 to ±80</td><td>Wider than backing</td></tr>
+    <tr><td>Pads / atmosphere</td><td>±60 to ±100</td><td>Fill the edges</td></tr>
+  </table>
+
+  <h3>The Frequency–Space Matrix</h3>
+  <p>Think of your mix as a 2D grid — pan position on the horizontal axis, frequency on the vertical.</p>
+
+  <!-- IMAGE 2 -->
+  <figure>
+    <img src="../images/frequency-space-matrix.png" alt="Frequency space matrix diagram">
+    <figcaption>The Frequency–Space Matrix — balancing elements across left/right and frequency.</figcaption>
+  </figure>
+
+  <!-- IMAGE 3 -->
+  <figure>
+    <img src="../images/logic-pro-mixer.png" alt="Logic Pro mixer example">
+    <figcaption>Example mix: pan positions across a real session.</figcaption>
+  </figure>
+
+</div>
