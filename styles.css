@@ -564,11 +564,11 @@ footer a:hover { color: var(--accent); }
 .article-body p {
   max-width: none;
   margin-bottom: 32px;
-  color: var(--text);
+  color: var(--muted);
 }
 
 .article-body p strong {
-  color: var(--text);
+  color: var(--muted);
   font-weight: 400;
 }
 
@@ -696,9 +696,6 @@ footer a:hover { color: var(--accent); }
   margin: 3rem 0;
 }
 
-.article-body {
-  max-width: 900px;
-}
 
 .article-hero {
   padding: 120px 56px 72px;
