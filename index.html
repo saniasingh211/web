@@ -9,24 +9,13 @@ const TWEAK_DEFAULTS_PLACEHOLDER = true;
 </style>
 <script>
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "rose_obsidian",
+  "theme": "obsidian",
   "accentColor": "#c8a96e",
   "showRuleLines": true
 }/*EDITMODE-END*/;
 
 const THEMES = {
 obsidian: { 
-  bg:"#080808",      // Warmer black
-  bg2:"#121010",     // Slightly warmer
-  card:"#1e1c1a",    // Richer card bg
-  
-  text:"#f8f8f8",     // Softer white for better readability
-  muted:"#c0c0c0",    // Brighter muted for better hierarchy
-  
-  accent:"#d4a96e",   // Warmer gold
-  rule:"rgba(212,169,110,0.22)" // Stronger rule lines
-},
-rose_obsidian: { 
   bg:"#0f0a0d",      // Rose-tinted black
   bg2:"#130f12",     
   card:"#1d181c",    
@@ -37,12 +26,13 @@ rose_obsidian: {
   accent:"#d8a89e",  // Rose gold
   rule:"rgba(216,168,158,0.20)"
 },
+
 sage:     { bg:"#0c100e", bg2:"#101410", card:"#181e16", text:"#dfe8df", muted:"#617061", accent:"#89b090", rule:"rgba(137,176,144,0.12)" },
 noir:     { bg:"#0e0c0f", bg2:"#120f13", card:"#1a141b", text:"#e8dde8", muted:"#72637a", accent:"#c47fa0", rule:"rgba(196,127,160,0.12)" }
-};
+}
 
 function applyTheme(p) {
-  const t = THEMES[p.theme] || THEMES.rose_obsidian;
+  const t = THEMES[p.theme] || THEMES.obsidian;
   const acc = p.accentColor || t.accent;
   const r = document.documentElement;
   r.style.setProperty('--bg',   t.bg);
