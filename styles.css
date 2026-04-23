@@ -508,6 +508,9 @@ footer a:hover { color: var(--accent); }
   align-items: flex-end;
   padding: 120px 56px 72px;
 }
+.article-hero > div {
+  max-width: 720px;
+}
 
 .article-meta {
   display: flex;
