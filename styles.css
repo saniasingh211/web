@@ -1,6 +1,5 @@
 /* ============================================================
    SANIA SINGH — SHARED STYLESHEET
-   All pages link to this. Edit here, all pages update.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap');
@@ -85,7 +84,7 @@ section { position: relative; z-index: 1; padding: 72px 56px; }
 .section-num   { font-size: 10px; letter-spacing: 0.22em; color: var(--accent); }
 .section-title { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
 .section-rule  { flex: 1; height: 1px; background: linear-gradient(to right, var(--rule), transparent); margin-left: 8px; }
-
+<!----------------------------------------------------------------------------------------->
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
   min-height: 52vh; display: flex; align-items: flex-end;
@@ -109,6 +108,7 @@ section { position: relative; z-index: 1; padding: 72px 56px; }
 }
 .page-hero-sub strong { color: var(--text); font-weight: 400; }
 
+<!----------------------------------------------------------------------------------------->
 /* ── HOMEPAGE HERO ── */
 #hero {
   min-height: 100vh;
@@ -148,6 +148,8 @@ section { position: relative; z-index: 1; padding: 72px 56px; }
   background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollPulse 2.4s ease-in-out infinite;
 }
+
+<!----------------------------------------------------------------------------------------->
 
 /* ── BUTTONS ── */
 .btn-primary {
@@ -222,6 +224,9 @@ a:hover .teaser-card::after { transform: scaleX(1); }
 .teaser-link  { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; }
 a:hover .teaser-link { color: var(--accent); }
 
+<!----------------------------------------------------------------------------------------->
+
+
 /* ── GALLERY ── */
 .gallery-grid {
   display: grid; grid-template-columns: repeat(12, 1fr);
@@ -251,6 +256,8 @@ a:hover .teaser-link { color: var(--accent); }
 .g-overlay span { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text); }
 .g-item:hover .g-overlay { opacity: 1; }
 
+<!----------------------------------------------------------------------------------------->
+
 /* ── CONTACT ── */
 #contact { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
 .contact-inner { max-width: 1100px; }
@@ -269,11 +276,16 @@ a.contact-col-value:hover { color: var(--text); }
   color: var(--muted); border-left: 1px solid var(--rule); padding-left: 24px;
 }
 
+
+<!----------------------------------------------------------------------------------------->
+
 /* ── SKILLS ── */
 .skill-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .skill-name { font-size: 14px; color: var(--text); font-weight: 300; }
 .skill-bar-wrap { width: 80px; height: 2px; background: rgba(255,255,255,0.1); }
 .skill-bar { height: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); transition: transform 1.2s ease; }
+
+<!----------------------------------------------------------------------------------------->
 
 /* ── FOOTER ── */
 footer {
@@ -285,6 +297,7 @@ footer span { font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
 footer a { font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; transition: color 0.3s; }
 footer a:hover { color: var(--accent); }
 
+<!----------------------------------------------------------------------------------------->
 /* ── MUSIC PAGE ── */
 .album-layout {
   display: grid; grid-template-columns: 260px 1fr;
@@ -339,6 +352,9 @@ footer a:hover { color: var(--accent); }
 .sc-wrap { border: 1px solid var(--rule); padding: 16px; background: var(--card); }
 .sc-wrap iframe { display: block; width: 100%; border: 0; height: 200px; }
 
+
+<!----------------------------------------------------------------------------------------->
+
 /* Music — Tracks & YouTube */
 .tracks-list { display: flex; flex-direction: column; gap: 2px; max-width: 1000px; }
 .track-item {
@@ -373,6 +389,9 @@ footer a:hover { color: var(--accent); }
 .live-card-year { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
 .live-card h3 { font-size: 17px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
 .live-card p { font-size: 13px; line-height: 1.8; color: var(--muted); }
+
+
+<!----------------------------------------------------------------------------------------->
 
 /* ── RESEARCH PAGE ── */
 .interests-layout {
@@ -448,6 +467,7 @@ footer a:hover { color: var(--accent); }
 .phd-int h3 { font-size: 15px; font-weight: 400; color: var(--text); margin-bottom: 10px; }
 .phd-int p { font-size: 13px; line-height: 1.8; color: var(--muted); }
 
+<!----------------------------------------------------------------------------------------->
 /* ── BLOG PAGE ── */
 .posts-layout {
   display: grid; grid-template-columns: 1fr 260px;
@@ -499,7 +519,7 @@ footer a:hover { color: var(--accent); }
 .sidebar-link:hover { color: var(--accent); }
 
 
-
+<!----------------------------------------------------------------------------------------->
 /* ── ESSAY / ARTICLE PAGE ── */
 
 .article-hero {
