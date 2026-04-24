@@ -640,10 +640,6 @@ footer a:hover { color: var(--accent); }
 }
 
 
-
-
-
-
 /* ── ANIMATIONS ── */
 @keyframes fadeUp    { from { opacity:0; transform:translateY(22px) } to { opacity:1; transform:none } }
 @keyframes fadeIn    { from { opacity:0 } to { opacity:1 } }
