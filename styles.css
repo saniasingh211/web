@@ -567,7 +567,10 @@ footer a:hover { color: var(--accent); }
 /* CLEAN ARTICLE BODY (matches music layout feel) */
 .article-body {
   max-width: 900px;
-  margin: 0 auto;
+
+  margin-left: 120px;   /* ← key change */
+  margin-right: auto;
+
   padding: 0 56px 80px;
 
   font-size: 17px;
