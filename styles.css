@@ -14,7 +14,8 @@
   --muted: #A7B4C0;
 
   --font:   "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  --serif:  "IM Fell English", Georgia, serif;
+  --serif: "Times New Roman", serif;
+  /* --serif:  "IM Fell English", Georgia, serif; */
 
   --accent:       #6FA3B5;
   --accent-strong:#1F7F8E;
