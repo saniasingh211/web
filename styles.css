@@ -673,6 +673,7 @@ footer a:hover { color: var(--accent); }
     --pad-section: 60px;
     --fs:    16px;
     --fs-lg: 20px;
+
   }
 
   nav { padding: 0 var(--pad-x); }
@@ -707,6 +708,15 @@ footer a:hover { color: var(--accent); }
   .track-audio { width: 100%; }
 
   footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+  .article-layout {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.essay-sidebar {
+  position: static;
+  padding-top: 0;
+}
 }
 
 .article-layout {
