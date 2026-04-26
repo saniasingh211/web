@@ -630,7 +630,7 @@ footer a:hover { color: var(--accent); }
 }
 
 .article-placeholder { padding: 0; background: none; border: none; margin-bottom: 24px; }
-.article-placeholder p { color: var(--article); margin: 0 0 32px; }
+.article-placeholder p { color: var(--article); margin: 0 0 24px; }
 
 .article-back {
   display: inline-flex; align-items: center; gap: 8px;
@@ -651,7 +651,6 @@ footer a:hover { color: var(--accent); }
   letter-spacing: -0.02em; color: var(--text); line-height: 1; margin-bottom: 16px;
 }
 .insta-desc { font-size: var(--fs); line-height: 1.85; color: var(--muted); max-width: none; margin-bottom: 0; }
-
 /* ── ANIMATIONS ── */
 @keyframes fadeUp    { from { opacity:0; transform:translateY(22px) } to { opacity:1; transform:none } }
 @keyframes fadeIn    { from { opacity:0 } to { opacity:1 } }
@@ -666,62 +665,7 @@ footer a:hover { color: var(--accent); }
 .d4 { transition-delay: 0.32s; }
 .d5 { transition-delay: 0.40s; }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .article-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .essay-sidebar {
-    position: static;
-    padding-top: 0;
-    opacity: 1;
-    transform: none;
-  }
-}
-  nav { padding: 0 var(--pad-x); }
-  .nav-links { display: none; }
-
-  .page-hero,
-  .article-hero { padding: calc(var(--nav-h) + 40px) var(--pad-x) 56px; }
-
-  .article-body { margin: 0 var(--pad-x); padding: 0 0 60px; }
-
-  #hero { grid-template-columns: 1fr; padding: calc(var(--nav-h) + 20px) var(--pad-x) 80px; }
-  .hero-right { display: none; }
-
-  .about-grid { grid-template-columns: 1fr; gap: 36px; }
-  .explore-grid { grid-template-columns: 1fr; }
-
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
-  .g-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
-
-  .album-layout,
-  .listen-layout,
-  .instruments-layout,
-  .interests-layout,
-  .thesis-layout,
-  .posts-layout,
-  .github-layout { grid-template-columns: 1fr; gap: 40px; }
-
-  .projects-grid,
-  .phd-interests { grid-template-columns: 1fr; }
-
-  .track-item { grid-template-columns: 1fr; }
-  .track-audio { width: 100%; }
-
-  footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
-  .article-layout {
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-/* .essay-sidebar {
-  position: static;
-  padding-top: 0;
-} */
-
+/* ── ESSAY SIDEBAR ── */
 .article-layout {
   display: grid;
   grid-template-columns: 1fr 260px;
@@ -742,6 +686,7 @@ footer a:hover { color: var(--accent); }
   opacity: 1;
   transform: none;
 }
+
 .sidebar-label {
   font-size: var(--fs-xxs);
   letter-spacing: 0.14em;
@@ -790,8 +735,6 @@ footer a:hover { color: var(--accent); }
   border-color: var(--muted);
 }
 
-
-
 .thought-sent {
   font-size: var(--fs-xxs);
   letter-spacing: 0.18em;
@@ -804,4 +747,59 @@ footer a:hover { color: var(--accent); }
 
 .thought-sent.show {
   opacity: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  :root {
+    --pad-x: 24px;
+    --pad-section: 60px;
+    --fs: 16px;
+    --fs-lg: 20px;
+  }
+
+  nav { padding: 0 var(--pad-x); }
+  .nav-links { display: none; }
+
+  .page-hero,
+  .article-hero { padding: calc(var(--nav-h) + 40px) var(--pad-x) 56px; }
+
+  .article-body { margin: 0 var(--pad-x); padding: 0 0 60px; }
+
+  #hero { grid-template-columns: 1fr; padding: calc(var(--nav-h) + 20px) var(--pad-x) 80px; }
+  .hero-right { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .explore-grid { grid-template-columns: 1fr; }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+  .g-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+
+  .album-layout,
+  .listen-layout,
+  .instruments-layout,
+  .interests-layout,
+  .thesis-layout,
+  .posts-layout,
+  .github-layout { grid-template-columns: 1fr; gap: 40px; }
+
+  .projects-grid,
+  .phd-interests { grid-template-columns: 1fr; }
+
+  .track-item { grid-template-columns: 1fr; }
+  .track-audio { width: 100%; }
+
+  footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .essay-sidebar {
+    position: static;
+    padding-top: 0;
+    opacity: 1;
+    transform: none;
+  }
 }
