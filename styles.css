@@ -667,15 +667,19 @@ footer a:hover { color: var(--accent); }
 .d5 { transition-delay: 0.40s; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  :root {
-    --pad-x: 24px;
-    --pad-section: 60px;
-    --fs:    16px;
-    --fs-lg: 20px;
-
+@media (max-width: 1024px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
+  .essay-sidebar {
+    position: static;
+    padding-top: 0;
+    opacity: 1;
+    transform: none;
+  }
+}
   nav { padding: 0 var(--pad-x); }
   .nav-links { display: none; }
 
@@ -713,11 +717,10 @@ footer a:hover { color: var(--accent); }
   gap: 40px;
 }
 
-.essay-sidebar {
+/* .essay-sidebar {
   position: static;
   padding-top: 0;
-}
-}
+} */
 
 .article-layout {
   display: grid;

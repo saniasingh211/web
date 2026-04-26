@@ -59,10 +59,12 @@
 </div>
 
   
-
 <div class="article-body">
 
+<div class="article-layout">
+
 <div class="article-placeholder">
+
 
 <p>Today, while exploring star periods 🔭 and the Cepheid variable stars, I learned about Leavitt&#39;s Law. I assumed it was a man, but to my surprise, it was Henrietta Swan Leavitt. I want to talk about her. I believe her work is very noteworthy. As a female scientist, stories and discoveries like this deserve to be in the spotlight.</p>
 <p>Cepheids are stars that pulsate. They physically expand and contract in a repeating cycle driven by internal pressure waves. Smaller, less massive Cepheids pulsate faster because there is less mass to move. Bigger ones pulse more slowly, like a large bell ringing slower than a small one.</p>
@@ -82,8 +84,21 @@ For those of you interested, the code and notes are on my GitHub.</p>
 <p>Reproduced the Leavitt Law from 2439 real Cepheid stars using OGLE-IV survey data. Phase folded a single Cepheid 160,000 light years away. All notebooks and theory notes are in the repo.</p>
 
 
+</div> <!-- closes article-placeholder -->
 
-</div>
+  <aside class="essay-sidebar">
+  <p class="sidebar-label">What do you think?</p>
+  <form class="thought-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="bcab8e24-c028-4a50-bd2f-79ac187bdb47">
+    <input type="text" name="name" placeholder="Your name" class="thought-input" />
+    <textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
+    <button type="submit" class="thought-btn">Send →</button>
+  </form>
+  <p class="thought-sent">— sent.</p>
+</aside>
+
+  </div> <!-- closes article-layout -->
+
 
 <a href="../blog.html" class="article-back">← Back to Writing</a>
 
@@ -105,11 +120,15 @@ For those of you interested, the code and notes are on my GitHub.</p>
 
 <script>
 
+
 window.addEventListener('scroll', () =>
 
-document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
-
-);
+document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+const sidebar = document.querySelector('.essay-sidebar');
+const sidebarObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+if (sidebar) sidebarObs.observe(sidebar);
 
 </script>
 

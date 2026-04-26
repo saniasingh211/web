@@ -106,15 +106,16 @@
 
 </div> <!-- closes article-placeholder -->
 
-    <aside class="essay-sidebar">
-      <p class="sidebar-label">What do you think?</p>
-      <form class="thought-form" action="https://formspree.io/f/mjgjzpae" method="POST">
-        <input type="text" name="name" placeholder="Your name" class="thought-input" />
-        <textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
-        <button type="submit" class="thought-btn">Send →</button>
-      </form>
-    </aside>
-
+  <aside class="essay-sidebar">
+  <p class="sidebar-label">What do you think?</p>
+  <form class="thought-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="2fc34cd9-e185-4672-a674-44f4913a457d">
+    <input type="text" name="name" placeholder="Your name" class="thought-input" />
+    <textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
+    <button type="submit" class="thought-btn">Send →</button>
+  </form>
+  <p class="thought-sent">— sent.</p>
+</aside>
   </div> <!-- closes article-layout -->
 
 
