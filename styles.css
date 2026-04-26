@@ -241,7 +241,7 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
   max-width: 1100px;
 }
 .about-figure {
-  margin: 0;
+  margin: 8px;
 }
 
 .about-figure figcaption {
@@ -605,8 +605,8 @@ footer a:hover { color: var(--accent); }
 /* Article body */
 .article-body {
   max-width: 640px;
-  margin: 0 var(--pad-x) 0;
-  padding: 0 0 96px;
+  margin: 0 var(--pad-x) 50px;
+  padding: 0 0 100px;
   font-size: var(--fs);
   line-height: 2;
   letter-spacing: 0.01em;
@@ -616,7 +616,7 @@ footer a:hover { color: var(--accent); }
 .article-body p strong { color: var(--accent-strong); font-weight: 400; }
 .article-body h2 {
   font-size: clamp(19px, 2.5vw, 26px); font-weight: 300; color: var(--text);
-  margin: 60px 0 20px; letter-spacing: -0.01em; line-height: 1.2; overflow: visible;
+  margin: 60px 0 40px; letter-spacing: -0.01em; line-height: 1.2; overflow: visible;
 }
 .article-body h2 em { font-style: italic; color: var(--accent); font-family: var(--serif); }
 .article-body h3 {
