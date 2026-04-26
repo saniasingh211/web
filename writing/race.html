@@ -73,6 +73,8 @@
 
 <div class="article-body">
 
+<div class="article-layout">
+
 <div class="article-placeholder">
 
 
@@ -102,7 +104,19 @@
 <p>Slow down. Take time. Get to know yourself, and you will see exactly where you are and where you are meant to be going.</p>
 
 
-</div>
+</div> <!-- closes article-placeholder -->
+
+    <aside class="essay-sidebar">
+      <p class="sidebar-label">What do you think?</p>
+      <form class="thought-form" action="https://formspree.io/f/mjgjzpae" method="POST">
+        <input type="text" name="name" placeholder="Your name" class="thought-input" />
+        <textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
+        <button type="submit" class="thought-btn">Send →</button>
+      </form>
+    </aside>
+
+  </div> <!-- closes article-layout -->
+
 
 <a href="../blog.html" class="article-back">← Back to Writing</a>
 
@@ -126,12 +140,16 @@
 
 window.addEventListener('scroll', () =>
 
-document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
-
-);
+document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+const sidebar = document.querySelector('.essay-sidebar');
+const sidebarObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+if (sidebar) sidebarObs.observe(sidebar);
 
 </script>
 
 </body>
 
 </html>
+

@@ -604,7 +604,7 @@ footer a:hover { color: var(--accent); }
 
 /* Article body */
 .article-body {
-  max-width: 640px;
+  max-width: none;        /* was 640px — remove the constraint */
   margin: 0 var(--pad-x) 50px;
   padding: 0 0 100px;
   font-size: var(--fs);
@@ -612,6 +612,7 @@ footer a:hover { color: var(--accent); }
   letter-spacing: 0.01em;
   color: var(--text);
 }
+
 .article-body p { max-width: none; margin-bottom: 32px; color: var(--text); }
 .article-body p strong { color: var(--accent-strong); font-weight: 400; }
 .article-body h2 {
@@ -706,4 +707,88 @@ footer a:hover { color: var(--accent); }
   .track-audio { width: 100%; }
 
   footer { flex-direction: column; gap: 12px; padding: 24px; text-align: center; }
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 60px;
+  align-items: start;
+}
+
+.essay-sidebar {
+  position: sticky;
+  top: 100px;
+  padding-top: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+
+.essay-sidebar.visible {
+  opacity: 1;
+  transform: none;
+}
+.sidebar-label {
+  font-size: var(--fs-xxs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.thought-input,
+.thought-textarea {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--edge);
+  color: var(--fg);
+  padding: 10px 14px;
+  font-size: var(--fs-sm);
+  font-family: inherit;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.thought-textarea {
+  height: 140px;
+}
+
+.thought-btn {
+  background: transparent;
+  border: 1px solid var(--edge);
+  color: var(--fg);
+  padding: 8px 20px;
+  font-size: var(--fs-xxs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.thought-btn:hover {
+  background: var(--card);
+}
+
+.thought-input:focus,
+.thought-textarea:focus {
+  outline: none;
+  border-color: var(--muted);
+}
+
+
+
+.thought-sent {
+  font-size: var(--fs-xxs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.thought-sent.show {
+  opacity: 1;
 }
