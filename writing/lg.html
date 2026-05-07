@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Letting Go — Sania Singh</title>
+
+<link rel="stylesheet" href="../styles.css">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });"></script>
+
+</head>
+
+<body>
+
+<nav id="nav">
+
+<a class="nav-name" href="../index.html">Sania Singh</a>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="../music.html">Music</a></li>
+<li><a href="../research.html">Research</a></li>
+<li><a href="../blog.html" class="active">Writing</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="article-hero">
+
+<div>
+
+<div class="article-meta">
+
+<span class="article-tag">Essay</span>
+<span class="article-date">07-05-26</span>
+
+</div>
+
+<h1>Let go. You are the<em> ground.</em></h1>
+
+</div>
+</div>
+
+<div class="article-body">
+
+<div class="article-layout">
+
+<div class="article-placeholder">
+
+<p>
+This comes from the most honest place in me, and from the conflicting things I’ve experienced in relationships.
+</p>
+
+<p>
+I have always been the person who functions in a hyperactive mode when it comes to communication — long calls, giant emails, essays, and writing breakup songs (yes.)
+</p>
+
+<p>
+I recently read a book called <em>The Let Them Theory</em>, and honestly, that’s what is grounding me this morning. I touched on this briefly in my essay called <em>Life Is Not a Race</em>: you cannot control external events or what other people do. You can only control yourself.
+</p>
+
+<p>
+This realization shifted me from abandonment and catastrophic pain to relief and peace. I can never control whether a person wants to stay in my life, cares for me, or chooses not to. Those things are completely outside my control, and no amount of over-explaining will change that.
+</p>
+
+<p>
+At first, this feels like giving immense power to the other person, because it feels like they can do whatever they want and I’ll still feel bad.
+</p>
+
+<p>
+Yes. Yes, I will.
+</p>
+
+<p>
+Because for years, I cared deeply. And for years, I believed: “If I just explain more, if I just say more, maybe it will work out.”
+</p>
+
+<p>
+This is true for multiple people in my life. But what I’ve realized is this:
+</p>
+
+<p><em>
+You can love someone, and still know they are not right for you.<br>
+You can love someone, and still feel unsafe with them.<br>
+You can love someone, and still know that you deserve more.</em>
+</p>
+
+<p>
+You can never control what someone else does, but you can understand their capacity and character.
+The steady thought holding me together through this is:
+</p>
+
+<p>
+I am a good person.<br>
+I am excited about many things, and I have a beautiful life filled with love.<br>
+I love labrador retrievers, and I am OK.
+</p>
+
+<p>
+<strong>The ground will not shift beneath me, because I am the ground.</strong><br>
+I am the anchor. In this one life I get, I can only control my actions, and how I give to others and to myself. And from today, I choose to live in this truth.
+</p>
+
+<p>
+It took me a long time to get here, but I’m here now.
+</p>
+
+<p>
+If you’re going through heartbreak or a falling out with someone, remember this:
+</p>
+
+<p><i>
+“I am in control of my life. I am in control of my actions and my emotions. I can move my toes, throw a tantrum, dance, or go write a cool piece of code.”</i>
+</p>
+
+<p><strong><em>I am the ground.</em></strong>
+
+</p>
+
+</div> <!-- closes article-placeholder -->
+
+<aside class="essay-sidebar">
+
+<p class="sidebar-label">What do you think?</p>
+
+<form class="thought-form" action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="2fc34cd9-e185-4672-a674-44f4913a457d">
+
+<input type="text" name="name" placeholder="Your name" class="thought-input" />
+
+<textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
+
+<button type="submit" class="thought-btn">Send →</button>
+
+</form>
+
+<p class="thought-sent">— sent.</p>
+
+</aside>
+
+</div> <!-- closes article-layout -->
+
+<a href="../blog.html" class="article-back">← Back to Writing</a>
+
+</div>
+
+<footer>
+
+<a href="../blog.html">← Writing</a>
+
+<span>© 2026 Sania Singh</span>
+
+<a href="../index.html">Home →</a>
+
+</footer>
+
+<script>
+
+window.addEventListener('scroll', () =>
+document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+
+const sidebar = document.querySelector('.essay-sidebar');
+
+const sidebarObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+if (sidebar) sidebarObs.observe(sidebar);
+
+</script>
+
+</body>
+</html>

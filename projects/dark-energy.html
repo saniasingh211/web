@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H₀ & Dark Energy — Sania Singh</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-name" href="../index.html">Sania Singh</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../music.html">Music</a></li>
+    <li><a href="../research.html" class="active">Research</a></li>
+    <li><a href="../blog.html">Writing</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <p class="page-hero-label">Project — Cosmology</p>
+    <h1>H₀ &amp; Dark <em>Energy</em></h1>
+    <p class="page-hero-sub">
+      The equation of state of dark energy — one parameter, <em>w</em>, whose value
+      determines whether the universe expands forever or eventually collapses.
+    </p>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <span class="section-title">Overview</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">What this<br>project <em>does.</em></h2>
+      <p class="reveal d1">
+        An upgrade to a Hubble expansion notebook — introducing a single new parameter,
+        <em>w</em>, the equation of state of dark energy. When <em>w</em> = −1 you recover
+        Einstein's cosmological constant: dark energy perfectly static, never changing.
+        When <em>w</em> ≠ −1 dark energy is dynamic — it evolves across cosmic history,
+        and the Friedmann equation changes with it.
+      </p>
+      <p class="reveal d2">
+        That one exponent is what DESI is trying to measure across 40 million galaxies right now.
+        The current data favours <em>w</em> ≠ −1 at 3–4 sigma — not yet a discovery, but enough
+        to take seriously. If confirmed, Einstein's cosmological constant was wrong, dark energy
+        evolves, and new physics is required.
+      </p>
+      <a href="https://github.com/saniasingh211/Research/tree/main/hubble" target="_blank"
+         class="project-link reveal d3"
+         style="margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;">
+        View on GitHub →
+      </a>
+    </div>
+    <div class="thesis-stack reveal d2">
+      <h3>Stack</h3>
+      <div class="stack-item"><span class="stack-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.95"></div></div></div>
+      <div class="stack-item"><span class="stack-name">NumPy</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.90"></div></div></div>
+      <div class="stack-item"><span class="stack-name">Matplotlib</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.85"></div></div></div>
+      <div class="stack-item"><span class="stack-name">Jupyter</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.80"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS / RESULTS -->
+<section id="details" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">Details</span>
+    <div class="section-rule"></div>
+  </div>
+  <div style="max-width:720px;">
+
+    <p class="reveal" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">Where <em>w</em> was hiding.</strong>
+      The original Hubble notebook computed the expansion rate as
+      <code>np.sqrt(Ω_m·(1+z)³ + Ω_Λ)</code>.
+      That flat <code>Ω_Λ</code> term with no redshift dependence was <em>w</em> = −1 in disguise —
+      dark energy assumed constant without ever saying so.
+      The honest version replaces it with <code>Ω_Λ·(1+z)^(3(1+w))</code>.
+      At <em>w</em> = −1 the exponent is zero, the term is flat, and you recover the old notebook exactly.
+      At any other value, dark energy evolves with redshift and cosmic history changes.
+    </p>
+
+    <p class="reveal d1" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">What the plots show.</strong>
+      Plot 1 — Hubble parameter H(z) for four values of <em>w</em>: all lines start at 1.0 today
+      (same universe now), then diverge at high redshift. <em>w</em> = −0.5 (red) gives the
+      highest H(z) — dark energy was stronger in the past, expansion was faster.
+      <em>w</em> = −1.5 (blue) gives the lowest — dark energy weaker in the past, expansion slower.
+      Plot 2 — comoving distance vs redshift — the lines flip. Fast past expansion means photons
+      accumulated redshift quickly, so distances are shorter. Slow past expansion means photons
+      travelled further to accumulate the same redshift. Same observed redshift; different physical
+      distances. That gap is what DESI is measuring.
+    </p>
+
+    <p class="reveal d2" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">The Big Crunch possibility.</strong>
+      If <em>w</em> drives dark energy negative over time, the universe eventually stops expanding,
+      reverses, and collapses — the Big Crunch, potentially ~20 billion years out.
+      For two decades the assumption was forever-expansion. DESI is the first survey with the
+      statistical power to genuinely challenge that.
+    </p>
+
+    <p class="reveal d3" style="font-size:15px;line-height:1.95;color:var(--muted);">
+      <strong style="color:var(--fg);">Next steps:</strong>
+      load real DESI public data, fit <em>w</em> directly to BAO observations, and plot the
+      percentage difference between <em>w</em> = −1 and the best-fit value.
+      One parameter. One exponent. The entire fate of the universe.
+    </p>
+
+  </div>
+</section>
+
+<footer>
+  <a href="../research.html">← Research</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="../index.html">Home →</a>
+</footer>
+
+<script>
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.stack-bar').forEach(b =>
+        b.style.transform = `scaleX(${b.dataset.w})`
+      );
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H₀ & Dark Energy — Sania Singh</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-name" href="../index.html">Sania Singh</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../music.html">Music</a></li>
+    <li><a href="../research.html" class="active">Research</a></li>
+    <li><a href="../blog.html">Writing</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <p class="page-hero-label">Project — Cosmology</p>
+    <h1>H₀ &amp; Dark <em>Energy</em></h1>
+    <p class="page-hero-sub">
+      The equation of state of dark energy — one parameter, <em>w</em>, whose value
+      determines whether the universe expands forever or eventually collapses.
+    </p>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <span class="section-title">Overview</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">What this<br>project <em>does.</em></h2>
+      <p class="reveal d1">
+        An upgrade to a Hubble expansion notebook — introducing a single new parameter,
+        <em>w</em>, the equation of state of dark energy. When <em>w</em> = −1 you recover
+        Einstein's cosmological constant: dark energy perfectly static, never changing.
+        When <em>w</em> ≠ −1 dark energy is dynamic — it evolves across cosmic history,
+        and the Friedmann equation changes with it.
+      </p>
+      <p class="reveal d2">
+        That one exponent is what DESI is trying to measure across 40 million galaxies right now.
+        The current data favours <em>w</em> ≠ −1 at 3–4 sigma — not yet a discovery, but enough
+        to take seriously. If confirmed, Einstein's cosmological constant was wrong, dark energy
+        evolves, and new physics is required.
+      </p>
+      <a href="https://github.com/saniasingh211/Research/tree/main/hubble" target="_blank"
+         class="project-link reveal d3"
+         style="margin-top:32px;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;">
+        View on GitHub →
+      </a>
+    </div>
+    <div class="thesis-stack reveal d2">
+      <h3>Stack</h3>
+      <div class="stack-item"><span class="stack-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.95"></div></div></div>
+      <div class="stack-item"><span class="stack-name">NumPy</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.90"></div></div></div>
+      <div class="stack-item"><span class="stack-name">Matplotlib</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.85"></div></div></div>
+      <div class="stack-item"><span class="stack-name">Jupyter</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.80"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS / RESULTS -->
+<section id="details" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">Details</span>
+    <div class="section-rule"></div>
+  </div>
+  <div style="max-width:720px;">
+
+    <p class="reveal" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">Where <em>w</em> was hiding.</strong>
+      The original Hubble notebook computed the expansion rate as
+      <code>np.sqrt(Ω_m·(1+z)³ + Ω_Λ)</code>.
+      That flat <code>Ω_Λ</code> term with no redshift dependence was <em>w</em> = −1 in disguise —
+      dark energy assumed constant without ever saying so.
+      The honest version replaces it with <code>Ω_Λ·(1+z)^(3(1+w))</code>.
+      At <em>w</em> = −1 the exponent is zero, the term is flat, and you recover the old notebook exactly.
+      At any other value, dark energy evolves with redshift and cosmic history changes.
+    </p>
+
+    <p class="reveal d1" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">What the plots show.</strong>
+      Plot 1 — Hubble parameter H(z) for four values of <em>w</em>: all lines start at 1.0 today
+      (same universe now), then diverge at high redshift. <em>w</em> = −0.5 (red) gives the
+      highest H(z) — dark energy was stronger in the past, expansion was faster.
+      <em>w</em> = −1.5 (blue) gives the lowest — dark energy weaker in the past, expansion slower.
+      Plot 2 — comoving distance vs redshift — the lines flip. Fast past expansion means photons
+      accumulated redshift quickly, so distances are shorter. Slow past expansion means photons
+      travelled further to accumulate the same redshift. Same observed redshift; different physical
+      distances. That gap is what DESI is measuring.
+    </p>
+
+    <p class="reveal d2" style="font-size:15px;line-height:1.95;color:var(--muted);margin-bottom:32px;">
+      <strong style="color:var(--fg);">The Big Crunch possibility.</strong>
+      If <em>w</em> drives dark energy negative over time, the universe eventually stops expanding,
+      reverses, and collapses — the Big Crunch, potentially ~20 billion years out.
+      For two decades the assumption was forever-expansion. DESI is the first survey with the
+      statistical power to genuinely challenge that.
+    </p>
+
+    <p class="reveal d3" style="font-size:15px;line-height:1.95;color:var(--muted);">
+      <strong style="color:var(--fg);">Next steps:</strong>
+      load real DESI public data, fit <em>w</em> directly to BAO observations, and plot the
+      percentage difference between <em>w</em> = −1 and the best-fit value.
+      One parameter. One exponent. The entire fate of the universe.
+    </p>
+
+  </div>
+</section>
+
+<footer>
+  <a href="../research.html">← Research</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="../index.html">Home →</a>
+</footer>
+
+<script>
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.querySelectorAll('.stack-bar').forEach(b =>
+        b.style.transform = `scaleX(${b.dataset.w})`
+      );
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
