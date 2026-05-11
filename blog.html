@@ -64,7 +64,7 @@
 
 <!---NEW POST--------------------------------------------------------------------------------------->
 
-<a href="writing/light.html" class="post-item reveal">
+<a href="writing/light.html" class="post-item reveal" data-date="2025-01-01">
 
 <span class="post-num">01</span>
 
@@ -73,7 +73,7 @@
 <div class="post-meta"><span class="post-tag">Physics</span><span class="post-date">January 2025</span></div>
 
 <h3 class="post-title">c is NOT the speed of light</h3>
-<!-- 
+<!--
 <p class="post-excerpt">text visible on writing main page
 </p> -->
 
@@ -83,12 +83,12 @@
 
 </a>
 
-  
+
 <!------------------------------------------------------------------------------------------------>
-<a href="writing/curtain.html" class="post-item reveal d1">
+<a href="writing/curtain.html" class="post-item reveal d1" data-date="2026-05-11">
 <span class="post-num">02</span>
 <div class="post-body">
-<div class="post-meta"><span class="post-tag">Life</span><span class="post-date">23 April 2026</span></div>
+<div class="post-meta"><span class="post-tag">Life</span><span class="post-date">11 May 2026</span></div>
 <h3 class="post-title">Behind the curtain lies the truth</h3>
  <p class="post-excerpt">The truth does not ask for your permission to exist. It just waits. </p>
 <div class="post-read">Read <span>→</span></div>
@@ -96,7 +96,7 @@
 </a>
 <!---POST 1-------------------------------------------------------------------------------------->
 
-<a href="writing/race.html" class="post-item reveal d1">
+<a href="writing/race.html" class="post-item reveal d1" data-date="2026-04-23">
 <span class="post-num">02</span>
 <div class="post-body">
 <div class="post-meta"><span class="post-tag">Life</span><span class="post-date">23 April 2026</span></div>
@@ -107,7 +107,7 @@
 </a>
 <!------henrietta----------------------------------------------------------------------------------->
 
-<a href="writing/henrietta.html" class="post-item reveal">
+<a href="writing/henrietta.html" class="post-item reveal" data-date="2026-04-01">
 <span class="post-num">03</span>
 <div class="post-body">
 <div class="post-meta"><span class="post-tag">Science</span><span class="post-date">01 April 2026</span></div>
@@ -118,12 +118,12 @@
 </a>
 <!---POST-2-------------------------------------------------------------------------------------->
 
-<a href="writing/stereo-field.html" class="post-item reveal">
+<a href="writing/stereo-field.html" class="post-item reveal" data-date="2026-03-30">
 <span class="post-num">04</span>
 <div class="post-body">
 <div class="post-meta"><span class="post-tag">Music</span><span class="post-date">30 March 2026</span></div>
 <h3 class="post-title">Stereo Field as a Co-ordinate system</h3>
- <p class="post-excerpt">Stereo fields in music production are fasicnating. 
+ <p class="post-excerpt">Stereo fields in music production are fasicnating.
   Every instrument sits precisely at a designated co-ordinate in a dimensional space.
   </p>
 <div class="post-read">Read <span>→</span></div>
@@ -176,6 +176,18 @@ const obs = new IntersectionObserver(entries =>
   { threshold: 0.1 }
 );
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Auto-sort posts by date (newest first) and renumber
+(function () {
+  const list = document.querySelector('.posts-list');
+  const items = Array.from(list.querySelectorAll('.post-item'));
+  items.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+  items.forEach((item, i) => {
+    list.appendChild(item);
+    const num = item.querySelector('.post-num');
+    if (num) num.textContent = String(i + 1).padStart(2, '0');
+  });
+})();
 
 // Sidebar tag filter
 document.querySelectorAll('.sidebar-tag').forEach(tag => {
