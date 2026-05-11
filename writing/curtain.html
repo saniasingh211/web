@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Behind the curtain lies the truth — Sania Singh</title>
+
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+
+<body>
+
+<nav id="nav">
+
+<a class="nav-name" href="../index.html">Sania Singh</a>
+
+<ul class="nav-links">
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../music.html">Music</a></li>
+  <li><a href="../research.html">Research</a></li>
+  <li><a href="../blog.html" class="active">Writing</a></li>
+  <li><a href="../index.html#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<div class="article-hero">
+  <div>
+    <div class="article-meta">
+      <span class="article-tag">Essay</span>
+      <span class="article-date">11-05-26</span>
+    </div>
+    <h1>Behind the <em>curtain,</em> lies the<em> truth.</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-layout">
+
+    <div class="article-placeholder">
+        <p>This comes from the most honest place in me. I have learned this the hard way, from my experience in relationships with people and my choices. </p>
+
+      <p>
+        I used to believe that if I explained clearly enough, communicated precisely enough, loved fully enough, things would resolve. I was convinced that the problem was always a gap in understanding, mine or theirs, and that the right words, in the right order, would close it.
+      </p>
+
+      <p>
+        What I did not understand then is that some gaps aren't misunderstandings or incomplete information. <strong>They are the missing pieces of a puzzle, which show you the whole picture.</strong>
+      </p>
+
+      <p>
+        We hang curtains over the things we are not ready to see. Not out of stupidity, or weakness, but because the light behind them is going to change everything, and some part of us already knows that. So we leave them closed a little longer. We ask for more time, more evidence, one more conversation. We tell ourselves we need more information before we can be sure.
+      </p>
+
+      <p>
+        Seeing clearly is not a gentle process. It is not a gradual dawning. It is both hands on the curtain, pulling hard, all the way open. Once you have done it, once you have seen what was behind it, you cannot hang the curtains back. The mind does not go back from the whole picture.
+      </p>
+
+      <p>
+        What you see isn't terrifying like a monster. It is usually a pattern. Quiet, repetitive, indifferent to your presence. A pattern that was always there, in the small things, in the timing, in what someone does when it costs them something versus when it costs them nothing. Easy things are not love. 
+        <strong>Easy things are convenience wearing the costume of love.</strong>
+      </p>
+
+      <p>
+        The real data is always in the difficult moments. 
+        What does someone do when showing up is genuinely hard? 
+        When you are at your lowest, not your most interesting? 
+        <strong>When love asks something of them, not just offers something to them? </strong>
+        That is the question worth asking. The answer is usually already there, if you are willing to read it without the filter.
+      </p>
+
+      <p>
+        I am not writing this to be cynical about love. <span style="color: #f4a7b9;">I believe in it completely.*</span> 
+        <p>I am writing this because <strong>I spent a long time confusing the warmth of someone's best moments for the truth of their character.</strong>
+            They are not the same thing. Character is what someone does for you when it costs them something. Full stop.</p>
+      </p>
+
+      <p>
+        The curtains are yours to open. Nobody can do it for you, and nobody can force you to do it before you are ready. I wasn't ready myself, until recently. Now, I have finally done it, and am writing this to you, my readers.
+      </p>
+
+      <p>
+        When you are ready, when you finally grab them with both hands and pull, what you find on the other side is not devastation. It is <strong>clarity.</strong> And clarity, even when it hurts, <strong>is always better than the dark</strong>.
+      </p>
+
+      <p>
+        You can love someone and still see them clearly. 
+       You can grieve what you thought something was, 
+        and still know, without doubt, 
+        that  <strong>you deserved better than what it actually was.</strong>
+      </p>
+
+      <p>
+        The truth does not ask for your permission to exist. It just waits.
+      </p>
+
+      <p>
+        Open the curtains. And remember this when you feel uneasy: you are the ground. And from the ground, the view is very clear.
+      </p>
+
+<p><i><span style="color: #f4a7b9;">*Labrador Retrievers are the embodiment of unconditional love. Personally, that is my bar. </span></i> </p>
+
+      <div style="margin-top: 4.5rem; overflow: hidden; border-radius: 8px; max-height: 400px;">
+        <img src="../images/dog.png" alt="Snowy" style="width: 80%; height: 100%; object-fit: cover; object-position: center 50%; display: block;">
+      </div>
+
+    </div>
+
+    <aside class="essay-sidebar">
+
+      <p class="sidebar-label">What do you think?</p>
+
+      <form class="thought-form" action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="2fc34cd9-e185-4672-a674-44f4913a457d">
+
+        <input type="text" name="name" placeholder="Your name" class="thought-input" />
+
+        <textarea name="message" placeholder="Leave a thought" class="thought-textarea" required></textarea>
+
+        <button type="submit" class="thought-btn">Send →</button>
+
+      </form>
+
+      <p class="thought-sent">— sent.</p>
+
+    </aside>
+
+  </div>
+
+  <a href="../blog.html" class="article-back">← Back to Writing</a>
+
+</div>
+
+<footer>
+  <a href="../blog.html">← Writing</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="../index.html">Home →</a>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () =>
+    document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+
+  const sidebar = document.querySelector('.essay-sidebar');
+
+  const sidebarObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  if (sidebar) sidebarObs.observe(sidebar);
+</script>
+
+</body>
+</html>
