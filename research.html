@@ -14,7 +14,8 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="music.html">Music</a></li>
     <li><a href="research.html" class="active">Research</a></li>
-    <li><a href="blog.html">Writing</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="writing.html">Writing</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
 </nav>
@@ -63,6 +64,58 @@
     </div>
   </div>
 </section> -->
+
+<!-- THESIS -->
+<section id="thesis" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <!-- <span class="section-num">04</span> -->
+    <span class="section-title">MSc Thesis &amp; Technical Work</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">MSc thesis on numerical methods for the <em>Vlasov–Poisson system.</em></h2>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px;">
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5930319" target="_blank" class="btn-primary" style="display:inline-block;">Read my thesis→</a>
+        <a href="https://github.com/saniasingh211" target="_blank" class="btn-ghost" style="display:inline-block;">View Code on GitHub →</a>
+      </div>
+      <!-- PLACEHOLDER: confirm exact GitHub repo/folder for the thesis code — currently pointing to profile root -->
+      <p class="reveal d1">
+        MSc thesis at Imperial College London, supervised by <strong>Prof. Colin Cotter</strong>: implemented
+        and compared two numerical methods for the 1D-1V <strong>Vlasov-Poisson plasma system</strong> in
+        Firedrake, a multistream grid-particle approximation and an independent 2D reference solver,
+        connected by a moment-based comparison pipeline I built using a mesh-immersion technique.
+      </p>
+      <p class="reveal d2">
+        Rather than demonstrating convergence, the thesis characterises where the multistream
+        approximation breaks down: <strong>accuracy plateaus around three to four streams</strong> and
+        <strong>becomes unstable at longer simulation times</strong>.
+      </p>
+      <p class="reveal d3">
+        Coursework spanning <strong>Advanced Quantum Mechanics, Dirac Notation, General Relativity,
+        Group Theory, and Advanced Probability</strong> — building the theoretical foundation for
+        computational research.
+      </p>
+      <div class="module-list reveal d3">
+        <div class="module-item">
+          <span class="module-name" style="color:var(--muted);font-style:italic;">[PLACEHOLDER — verified MSc module marks pending transcript review]</span>
+        </div>
+      </div>
+      <p class="reveal d3" style="margin-top:16px;font-size:var(--fs-sm);">
+        <a href="academics.html">Full module list &amp; marks — see Academics →</a>
+      </p>
+    </div>
+    <div class="thesis-stack reveal d2">
+      <h3>Technical Stack</h3>
+      <div class="stack-item"><span class="stack-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.95"></div></div></div>
+      <div class="stack-item"><span class="stack-name">Firedrake</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.88"></div></div></div>
+      <div class="stack-item"><span class="stack-name">NumPy / SciPy</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.90"></div></div></div>
+      <div class="stack-item"><span class="stack-name">MATLAB</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.78"></div></div></div>
+      <div class="stack-item"><span class="stack-name">SQL · Swift · Git</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.70"></div></div></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- PROJECTS -->
 <section id="projects">
@@ -133,7 +186,7 @@
       <h3>H₀ & Dark Energy</h3>
       <p>Computed the Hubble constant from first principles and explored the dark energy equation of state parameter w. Compared CMB-derived and late-universe measurements — the Hubble tension is one of the most significant open problems in cosmology right now.</p>
       <div class="project-detail">Cosmological expansion · Dark energy · H₀ tension</div>
-      <a href="https://github.com/saniasingh211/Research/tree/main/hubble" target="_blank" class="project-link">View on GitHub →</a>
+      <a href="projects/dark-energy.html" class="project-link">Read the Write-up →</a>
     </div>
 
     <div class="project-card reveal d4">
@@ -145,52 +198,6 @@
       <a href="https://github.com/saniasingh211/Research/tree/main/particles" target="_blank" class="project-link">View on GitHub →</a>
     </div>
 
-  </div>
-</section>
-
-
-<!-- THESIS -->
-<section id="thesis" style="background:var(--bg2);">
-  <div class="section-header reveal">
-    <!-- <span class="section-num">04</span> -->
-    <span class="section-title">MSc Thesis &amp; Technical Work</span>
-    <div class="section-rule"></div>
-  </div>
-  <div class="thesis-layout">
-    <div class="thesis-copy">
-      <h2 class="reveal">MSc Thesis in high-performance solvers for complex <em>PDE systems.</em></h2>
-      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5930319" target="_blank" class="btn-primary" style="display:inline-block;margin-bottom:20px;">Read my thesis→</a>
-      <p class="reveal d1">
-        MSc thesis at Imperial College London — <strong>computational modelling using finite element
-        analysis</strong> with <strong>Firedrake</strong> (Python). Implemented multiple discretisation schemes with
-        statistical convergence analysis and rigorous error quantification.
-      </p>
-      <p class="reveal d2">
-        Built a complete FEM library from scratch: <strong>matrix assembly, sparse solvers,
-        boundary condition enforcement, nonlinear iteration</strong>, and performance benchmarking.
-        Full cycle: physical model → mathematical formulation → numerical implementation → validation.
-      </p>
-      <p class="reveal d3">
-        Coursework spanning <strong>Advanced Quantum Mechanics, Dirac Notation, General Relativity,
-        Group Theory, and Advanced Probability</strong> — building the theoretical foundation for
-        computational research.
-      </p>
-      <div class="module-list reveal d3">
-        <div class="module-item"><span class="module-name">Advanced Probability &amp; Group Theory</span><span class="module-score">95%</span></div>
-        <div class="module-item"><span class="module-name">Computational Quantum Mechanics</span><span class="module-score">86%</span></div>
-        <div class="module-item"><span class="module-name">Numerical ODEs</span><span class="module-score">91%</span></div>
-        <div class="module-item"><span class="module-name">Finite Element Methods</span><span class="module-score">76%</span></div>
-        <div class="module-item"><span class="module-name">Linear Algebra &amp; Tensor Analysis</span><span class="module-score">76%</span></div>
-      </div>
-    </div>
-    <div class="thesis-stack reveal d2">
-      <h3>Technical Stack</h3>
-      <div class="stack-item"><span class="stack-name">Python</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.95"></div></div></div>
-      <div class="stack-item"><span class="stack-name">Firedrake</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.88"></div></div></div>
-      <div class="stack-item"><span class="stack-name">NumPy / SciPy</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.90"></div></div></div>
-      <div class="stack-item"><span class="stack-name">MATLAB</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.78"></div></div></div>
-      <div class="stack-item"><span class="stack-name">SQL · Swift · Git</span><div class="stack-bar-wrap"><div class="stack-bar" data-w="0.70"></div></div></div>
-    </div>
   </div>
 </section>
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academics — Sania Singh</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-name" href="index.html">Sania Singh</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="academics.html" class="active">Academics</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <p class="page-hero-label">04 — Academics</p>
+    <h1>The <em>Academics</em></h1>
+    <p class="page-hero-sub">
+      The full academic record behind the headline stats — <strong>verified module marks,
+      undergraduate lab &amp; project code, and school results</strong>. This page is the
+      appendix my CV points to.
+    </p>
+  </div>
+</div>
+
+<!-- BSc PHYSICS -->
+<section id="bsc">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <span class="section-title">BSc Physics — Miranda House, University of Delhi</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">BSc Physics <em>(First Class).</em></h2>
+      <p class="reveal d1">
+        Full module-by-module breakdown with marks, as verified from the Miranda House transcript.
+      </p>
+      <div class="module-list reveal d2">
+        <div class="module-item">
+          <span class="module-name" style="color:var(--muted);font-style:italic;">[PLACEHOLDER — full BSc Physics module list &amp; marks pending, to be supplied from Miranda House transcript]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MSc APPLIED MATHEMATICS -->
+<section id="msc" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">MSc Applied Mathematics — Imperial College London</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">MSc Applied Mathematics <em>(Merit).</em></h2>
+      <p class="reveal d1">
+        Full module-by-module breakdown with marks, as verified from the Imperial transcript.
+        (See <a href="research.html">Research</a> for the thesis itself.)
+      </p>
+      <div class="module-list reveal d2">
+        <div class="module-item">
+          <span class="module-name" style="color:var(--muted);font-style:italic;">[PLACEHOLDER — full MSc Applied Mathematics module list &amp; marks pending, to be supplied from Imperial transcript]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB & PROJECT CODE INVENTORY -->
+<section id="code-inventory">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <span class="section-title">Undergraduate Lab &amp; Project Code</span>
+    <div class="section-rule"></div>
+  </div>
+  <div style="max-width:900px;">
+    <p class="reveal d1" style="font-size:var(--fs);line-height:1.95;color:var(--muted);margin-bottom:8px;max-width:64ch;">
+      A full inventory of undergraduate lab and project code, organised by semester and course,
+      each linking to the relevant file on GitHub. Structure below is a scaffold — duplicate the
+      <code>.subsection-label</code> + <code>.module-list</code> block for each semester.
+    </p>
+
+    <!-- Duplicate this block per semester -->
+    <div class="subsection-label reveal d1">Semester [PLACEHOLDER]</div>
+    <div class="module-list reveal d2">
+      <div class="module-item">
+        <span class="module-name">[PLACEHOLDER — Course Name — Lab/Project Title]</span>
+        <a href="#" class="module-score">[PLACEHOLDER — GitHub link]</a>
+      </div>
+      <div class="module-item">
+        <span class="module-name">[PLACEHOLDER — Course Name — Lab/Project Title]</span>
+        <a href="#" class="module-score">[PLACEHOLDER — GitHub link]</a>
+      </div>
+    </div>
+
+    <div class="subsection-label reveal d1">Semester [PLACEHOLDER]</div>
+    <div class="module-list reveal d2">
+      <div class="module-item">
+        <span class="module-name">[PLACEHOLDER — Course Name — Lab/Project Title]</span>
+        <a href="#" class="module-score">[PLACEHOLDER — GitHub link]</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOL RESULTS -->
+<section id="school-results" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <span class="section-title">School Results — CBSE</span>
+    <div class="section-rule"></div>
+  </div>
+  <div style="max-width:900px;">
+
+    <div class="subsection-label reveal d1">Class X — 2018</div>
+    <div class="module-list reveal d2">
+      <div class="module-item">
+        <span class="module-name" style="color:var(--muted);font-style:italic;">[PLACEHOLDER — full CBSE Class X (2018) subject breakdown pending]</span>
+      </div>
+    </div>
+
+    <div class="subsection-label reveal d1">Class XII — 2020</div>
+    <div class="module-list reveal d2">
+      <div class="module-item">
+        <span class="module-name" style="color:var(--muted);font-style:italic;">[PLACEHOLDER — full CBSE Class XII (2020) subject breakdown pending]</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <a href="research.html">← Research</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="writing.html">Writing →</a>
+</footer>
+
+<script>
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
