@@ -22,7 +22,7 @@
   --fs-xs:    11px;   /* labels, tags, meta, uppercase UI */
   --fs-xxs:   10px;   /* tiny labels, section numbers */
   --fs-lg:    24px;   /* large body, card titles */
-  --fs-hero:  clamp(60px, 9vw, 120px);
+  --fs-hero:  clamp(64px, 11vw, 168px);
   --fs-h1:    clamp(56px, 9vw, 120px);
   --fs-h2:    clamp(28px, 4vw, 48px);
   --fs-h3:    clamp(24px, 3vw, 38px);
@@ -159,9 +159,11 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
 /* ── HOMEPAGE HERO ── */
 #hero {
   min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
-  padding: calc(var(--nav-h) + 20px) var(--pad-x) 88px;
+  gap: 80px;
+  max-width: 1600px; margin-inline: auto;
+  padding: calc(var(--nav-h) + 20px) var(--pad-x) 96px;
 }
 .hero-eyebrow {
   font-size: var(--fs-xs); letter-spacing: 0.22em; text-transform: uppercase;
@@ -176,8 +178,8 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
 }
 .hero-name em { font-style: italic; color: var(--accent); font-family: var(--serif); }
 .hero-tagline {
-  margin-top: 36px; font-size: var(--fs); line-height: 1.85;
-  color: var(--muted); max-width: 420px;
+  margin-top: 40px; font-size: var(--fs); line-height: 1.95;
+  color: var(--muted); max-width: 40ch;
   opacity: 0; animation: fadeUp 0.9s ease 0.55s forwards;
 }
 .hero-tagline strong { color: var(--text); font-weight: 400; }
@@ -196,6 +198,17 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
   width: 1px; height: 80px;
   background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+#brain-image {
+  display: flex; justify-content: center;
+  padding: 40px var(--pad-x);
+}
+.brain-img {
+  width: 50%;
+  max-width: 640px;
+  height: auto;
+  display: block;
 }
 
 /* ── BUTTONS ── */
@@ -236,13 +249,22 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
 /* ── ABOUT ── */
 .about-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 80px;
-  max-width: 1100px;
+  grid-template-columns: 2fr 3fr;
+  gap: 72px;
+  max-width: 1340px;
+  align-items: start;
+}
+.about-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
 }
 .about-figure {
-  margin: 8px;
+  margin: 0;
 }
+.about-figure--music { align-self: start; }
+.about-img--music { object-position: center; }
 
 .about-figure figcaption {
   margin-top: 10px;
@@ -264,6 +286,7 @@ section { position: relative; z-index: 1; padding: var(--pad-section) var(--pad-
   font-size: var(--fs-h2); font-weight: 300; line-height: 1.15;
   letter-spacing: -0.015em; margin-bottom: 32px; color: var(--text);
 }
+.about-text p { max-width: none; }
 .about-text h2 em { font-style: italic; color: var(--accent); font-family: var(--serif); }
 .about-text p { font-size: var(--fs); line-height: 1.95; color: var(--muted); margin-bottom: 22px; }
 .about-text p strong { color: var(--text); font-weight: 400; }
@@ -300,6 +323,19 @@ a:hover .teaser-card::after { transform: scaleX(1); }
 a:hover .teaser-link { color: var(--accent); }
 
 /* ── GALLERY ── */
+.gallery-featured { margin: 0 0 40px; max-width: 1100px; }
+.gallery-featured-img {
+  width: 100%; max-height: 480px;
+  object-fit: cover;
+  border: 1px solid var(--edge);
+}
+.gallery-featured figcaption {
+  margin-top: 10px;
+  font-size: var(--fs-xxs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .gallery-grid {
   display: grid; grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: 200px; gap: 3px; max-width: 1100px;
@@ -314,6 +350,11 @@ a:hover .teaser-link { color: var(--accent); }
 .g-item::before {
   content: ''; position: absolute; inset: 0;
   background: repeating-linear-gradient(135deg, transparent, transparent 5px, var(--noise-light) 5px, var(--noise-light) 6px);
+}
+.g-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 .g-label {
   position: absolute; bottom: 16px; left: 16px;

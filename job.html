@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work, Sania Singh</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-name" href="index.html">Sania Singh</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="academics.html">Academics</a></li>
+    <li><a href="job.html" class="active">Work</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div>
+    <p class="page-hero-label">06, Work</p>
+    <h1>The <em>Work</em></h1>
+    <p class="page-hero-sub">
+      <strong>Lead Data Architect, AI Product &amp; Systems</strong>, Insaito, Inc. (operating brand
+      <strong>Automatan</strong>) · Jan–Mar 2026. Everything below is what I actually built, debugged
+      and shipped, the detail a CV line can't hold. No proprietary code, prompts, client data or
+      business figures appear below; what's shown is the engineering and process, in the same spirit
+      as the rest of this site.
+    </p>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <span class="section-title">The Problem I Was Hired to Solve</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <h2 class="reveal">Take an AI lead-generation pipeline from <em>one vertical to four.</em></h2>
+      <p class="reveal d1">
+        Automatan's product scrapes target-company websites against a set of criteria, scores the
+        results with an LLM, and generates outreach material from those scores. Before this role,
+        exactly one vertical worked end to end. The job was to replicate that pipeline for new
+        markets, each defined by criteria written by non-technical product and sales staff, not
+        engineers, while the inherited system underneath had unresolved reliability problems:
+        duplicate scrape targets, unreliable failure counts, and, discovered mid-tenure, a systematic
+        LLM hallucination pattern in the scoring stage itself.
+      </p>
+      <p class="reveal d2">
+        I extended the pipeline to four production verticals (E-commerce, Consulting, Business-Coach
+        and Recruitment, alongside the pre-existing Speaker vertical), while root-causing and fixing
+        the data-integrity and model-reliability bugs underneath all of them.
+      </p>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;margin-top:8px;">
+        <div class="stat-item reveal d3">
+          <div class="stat-num">1 → 4</div>
+          <div class="stat-label">Production verticals<br>extended &amp; hardened</div>
+        </div>
+        <div class="stat-item reveal d3">
+          <div class="stat-num">5×</div>
+          <div class="stat-label">Faster email-generation<br>via added concurrency</div>
+        </div>
+        <div class="stat-item reveal d3">
+          <div class="stat-num">~3K</div>
+          <div class="stat-label">Hallucination error lines<br>root-caused to one bug</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I BUILT -->
+<section id="built" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <span class="section-title">What I Built &amp; Fixed</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card reveal d1">
+      <div class="project-icon">~</div>
+      <p class="project-tag">Ingestion &amp; Data Integrity</p>
+      <h3>Fixing the Numbers Before Fixing the Model</h3>
+      <p>Canonical-domain deduplication fix (http/https and www variants were silently counted as separate scrape targets). Fixed a progress-tracker that double-counted the same failed site across multiple report files. Built a new tool classifying every scrape failure by HTTP status code and network-error type, to separate "the target is genuinely unreachable" from "our pipeline is broken."</p>
+      <div class="project-detail">Python · Data pipeline debugging · Failure taxonomy</div>
+    </div>
+
+    <div class="project-card reveal d2">
+      <div class="project-icon">⬡</div>
+      <p class="project-tag">LLM Inference &amp; Scoring</p>
+      <h3>Root-Causing a Hallucination Pattern in Production</h3>
+      <p>Refactored a Pub/Sub-driven, Triton-based inference server to fix a timestamp bug and a crash on the failure path. Root-caused a scoring bug where the parser checked for a field the prompt never produced. Separately traced a recurring hallucination pattern to a direct contradiction between the system prompt (forbidding extra keys) and the user prompt (demanding fields outside that schema), diagnosed against production logs, then shipped the fix.</p>
+      <div class="project-detail">Python · GCP Pub/Sub · OpenAI API · Prompt/schema debugging</div>
+    </div>
+
+    <div class="project-card reveal d3">
+      <div class="project-icon">✦</div>
+      <p class="project-tag">Evaluation Methodology</p>
+      <h3>Separating "Wrong Answer" from "Wrong Parsing"</h3>
+      <p>Designed a two-stage evaluation methodology distinguishing whether the model answered a criterion correctly from whether the downstream parser interpreted that answer correctly, with a gold-labeled test-set plan and per-criterion confusion-matrix tracking. Cross-checked scoring outputs against a second reviewer's independently, surfacing concrete reasoning contradictions the model itself had missed.</p>
+      <div class="project-detail">Stratified sampling · Precision/recall · Confusion matrices</div>
+    </div>
+
+    <div class="project-card reveal d4">
+      <div class="project-icon">◎</div>
+      <p class="project-tag">Schema &amp; Architecture</p>
+      <h3>Prose Prompts → Enforced JSON Schema</h3>
+      <p>Led the migration from prose-described JSON output to OpenAI's enforced <code>strict: true</code> JSON Schema across four scoring and generation workflows, eliminating a whole class of parsing errors. Refactored the output router into per-market modules sharing a common base, and implemented a previously-empty email-publishing function end to end, with matching per-part output structure.</p>
+      <div class="project-detail">OpenAI structured outputs · Refactoring · GCP Cloud Tasks</div>
+    </div>
+
+    <div class="project-card reveal d1">
+      <div class="project-icon">⊕</div>
+      <p class="project-tag">Integrations &amp; Tooling</p>
+      <h3>CRM Migration &amp; Internal Tools</h3>
+      <p>Built an OAuth2 self-refreshing token client and field-mapping pipeline to migrate lead data from Streak into Zoho CRM. Added <code>ThreadPoolExecutor</code>-based concurrency to the email-generation stage. Wrote a small monitoring utility for checking pipeline task status without switching between server tabs, and shared it with the team.</p>
+      <div class="project-detail">OAuth2 · Zoho CRM API · Concurrent processing</div>
+    </div>
+
+    <div class="project-card reveal d2">
+      <div class="project-icon">∿</div>
+      <p class="project-tag">Cross-Functional QA</p>
+      <h3>Bridging Engineering and Product</h3>
+      <p>Acted as the technical bridge between engineering and the non-technical product/sales teams who wrote the scraping criteria: reviewing prompt specifications for internal contradictions before they hit production, debugging output errors end to end, and auditing AI-generated outputs against ground truth. Authored the internal runbooks colleagues used for scraping and CRM operations.</p>
+      <div class="project-detail">Technical writing · Prompt review · Ground-truth auditing</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <span class="section-title">Results, In Real Numbers</span>
+    <div class="section-rule"></div>
+  </div>
+  <p class="reveal d1" style="font-size:var(--fs);line-height:1.95;color:var(--muted);margin-bottom:32px;max-width:64ch;">
+    Every figure below is quantified against a specific fix, run, or log, not a general impression.
+  </p>
+  <div class="module-list reveal d2" style="max-width:900px;">
+    <div class="module-item"><span class="module-name">Duplicate scrape targets found &amp; fixed across two production input lists</span><span class="module-score">46.2% / 55.4%</span></div>
+    <div class="module-item"><span class="module-name">Apparent vs. actual unique failures, before/after the progress-tracking fix</span><span class="module-score">13,751 → 3,355</span></div>
+    <div class="module-item"><span class="module-name">Failed rows classified by cause in one run, ~37% HTTP 403/429, ~29% DNS</span><span class="module-score">44,896 rows</span></div>
+    <div class="module-item"><span class="module-name">Hallucination/schema-drift error lines traced to one root-cause contradiction</span><span class="module-score">2,976 lines</span></div>
+    <div class="module-item"><span class="module-name">Recruitment vertical: raw rows deduplicated to unique sites, across 1,409 output parts</span><span class="module-score">22,460 → 13,847</span></div>
+    <div class="module-item"><span class="module-name">Email-generation runtime for a 6-lead batch, after adding concurrency</span><span class="module-score">7.5 min → 75 sec</span></div>
+    <div class="module-item"><span class="module-name">Structured-output validation run: valid JSON, all schema fields present, every time</span><span class="module-score">100%</span></div>
+    <div class="module-item"><span class="module-name">Scoring tasks processed in production across two hardened verticals</span><span class="module-score">200,000+</span></div>
+  </div>
+</section>
+
+<!-- METHODS & TOOLS -->
+<section id="stack" style="background:var(--bg2);">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <span class="section-title">Methods &amp; Tools</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="about-tags reveal d1" style="max-width:900px;">
+    <span class="tag">Python</span>
+    <span class="tag">GCP · Pub/Sub</span>
+    <span class="tag">GCP · Firestore</span>
+    <span class="tag">GCP · Cloud Storage</span>
+    <span class="tag">GCP · Secret Manager</span>
+    <span class="tag">GCP · Cloud Tasks</span>
+    <span class="tag">OpenAI API · Structured Outputs</span>
+    <span class="tag">Zoho CRM API · OAuth2</span>
+    <span class="tag">Git / GitHub</span>
+    <span class="tag">Cursor (AI-assisted IDE)</span>
+    <span class="tag">Concurrent Processing</span>
+    <span class="tag">Statistical Evaluation</span>
+    <span class="tag">Confusion Matrices</span>
+    <span class="tag">Technical Documentation</span>
+  </div>
+</section>
+
+<!-- WORKING METHOD -->
+<section id="method">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <span class="section-title">How I Worked</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="thesis-layout">
+    <div class="thesis-copy">
+      <p class="reveal d1">
+        <strong>AI-assisted, honestly.</strong> Cursor was my standing development tool from day one
+        of the role. AI-assisted coding was the working method throughout, not an exception applied
+        to a few files, I don't have file-by-file attribution of what the agent generated versus
+        what I wrote by hand, and I'd rather say that plainly than imply more precision than I have.
+      </p>
+      <p class="reveal d2">
+        <strong>Debugging as the day job.</strong> Most of the depth above came from tracing production
+        failures back to a root cause, a contradiction in a prompt schema, a double-counted CSV row,
+        an off-by-one in a progress tracker, rather than from designing a system from a blank page.
+        The existing architecture (GCP-native, Pub/Sub-driven) was inherited; my job was to extend it
+        reliably and fix what didn't hold up at scale.
+      </p>
+      <p class="reveal d3">
+        <strong>What this page leaves out, deliberately.</strong> No prompts, scoring criteria, source
+        code, client or target-company names, or business figures appear anywhere on this page, only
+        the engineering problem, the method, and the measured outcome.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="academics.html">← Academics</a>
+  <span>© 2026 Sania Singh</span>
+  <a href="writing.html">Writing →</a>
+</footer>
+
+<script>
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60)
+);
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
