@@ -337,37 +337,15 @@ a:hover .teaser-link { color: var(--accent); }
   color: var(--muted);
 }
 .gallery-grid {
-  display: grid; grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 200px; gap: 3px; max-width: 1100px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; max-width: 1100px;
 }
-.g-item { background: var(--card); position: relative; overflow: hidden; cursor: pointer; }
-.g-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
-.g-item:nth-child(2) { grid-column: span 5; }
-.g-item:nth-child(3) { grid-column: span 5; }
-.g-item:nth-child(4) { grid-column: span 4; }
-.g-item:nth-child(5) { grid-column: span 4; }
-.g-item:nth-child(6) { grid-column: span 4; }
-.g-item::before {
-  content: ''; position: absolute; inset: 0;
-  background: repeating-linear-gradient(135deg, transparent, transparent 5px, var(--noise-light) 5px, var(--noise-light) 6px);
-}
+.g-item { position: relative; overflow: hidden; aspect-ratio: 4 / 3; }
 .g-img {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-.g-label {
-  position: absolute; bottom: 16px; left: 16px;
-  font-size: var(--fs-xxs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); z-index: 2;
-}
-.g-overlay {
-  position: absolute; inset: 0;
-  background: color-mix(in srgb, black 45%, transparent);
-  z-index: 3; opacity: 0; transition: opacity 0.3s;
-  display: flex; align-items: center; justify-content: center;
-}
-.g-overlay span { font-size: var(--fs-xxs); letter-spacing: 0.2em; text-transform: uppercase; color: var(--bg); }
-.g-item:hover .g-overlay { opacity: 1; }
 
 /* ── CONTACT ── */
 #contact { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
@@ -839,8 +817,7 @@ footer a:hover { color: var(--accent); }
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .explore-grid { grid-template-columns: 1fr; }
 
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
-  .g-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
 
   .album-layout,
   .listen-layout,
